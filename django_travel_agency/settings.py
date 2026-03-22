@@ -20,9 +20,9 @@ load_dotenv(BASE_DIR / ".env")
 # ===============================
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-default-key")
 
-DEBUG = os.getenv("DEBUG", "False") == ""
+DEBUG =False
 
-ALLOWED_HOSTS = ['*']  # change in production
+ALLOWED_HOSTS = ['.onrender.com']  # change in production
 
 # ===============================
 # APPLICATIONS
