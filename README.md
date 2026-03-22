@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="top" align="center">
 	  <img src="https://github.com/user-attachments/assets/88780687-0ffb-4166-9b3d-df6b6b3e73cc" height="150"  />
 
@@ -196,3 +197,6 @@ I started this but didn't have time to finish it all. I created an assistant to 
 
 
 Developed with 💕 by **ahlem-phantom**.
+=======
+# django-travel-agency
+>>>>>>> 90e3c0c51c151089b4e4acf1c03dc631285752cf
