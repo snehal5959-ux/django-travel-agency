@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/country_places.css' %}">
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center">
+        Places in {{ country.name }}
+    </h2>
+
+    {% for place in places %}
+    <div class="place-card">
+        <img src="{{ place.image.url }}" alt="{{ place.name }}">
+
+        <div class="place-info">
+            <h4>{{ place.name }}</h4>
+            <p>{{ place.description|truncatechars:140 }}</p>
+            <span class="price">₹{{ place.price }}</span>
+        </div>
+
+        <div class="place-action">
+            <a href="{% url 'booking_handler_view' place.id %}" class="book-btn">
+                Book Now
+            </a>
+        </div>
+    </div>
+    {% empty %}
+        <p class="text-center">No places available.</p>
+    {% endfor %}
+</div>
+
+<script src="{% static 'js/country_places.js' %}"></script>
+{% endblock %}

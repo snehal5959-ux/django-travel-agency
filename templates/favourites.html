@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4">My Favourites ❤️</h2>
+    {% if fav_packages %}
+        <div class="row">
+            {% for fav in fav_packages %}
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="{{ fav.package.image.url }}" class="card-img-top" alt="{{ fav.package.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ fav.package.name }}</h5>
+                        <p class="card-text">${{ fav.package.price }}</p>
+                        <a href="{% url 'booking_handler_view' package_id=fav.package.id %}" class="btn btn-primary">Book Now</a>
+                        <a href="{% url 'remove_from_favourites' fav.package.id %}" class="btn btn-danger">Remove</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>You have no favourite packages yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

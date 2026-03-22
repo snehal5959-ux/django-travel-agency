@@ -1,0 +1,43 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<h3 class="mb-4">{{ title }}</h3>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        {{ form.title.label_tag }}
+        {{ form.title }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.slug.label_tag }}
+        {{ form.slug }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.image.label_tag }}
+        {{ form.image }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.short_desc.label_tag }}
+        {{ form.short_desc }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.full_content.label_tag }}
+        {{ form.full_content }}
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Save
+    </button>
+
+    <a href="{% url 'admin_blog_list' %}" class="btn btn-secondary">
+        Cancel
+    </a>
+</form>
+
+{% endblock %}

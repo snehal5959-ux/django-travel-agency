@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* --- RESTORING YOUR ORIGINAL CSS (UNTOUCHED) --- */
+    #spinner { opacity: 0; visibility: hidden; transition: opacity .5s ease-out, visibility 0s linear .5s; z-index: 99999; }
+    #spinner.show { transition: opacity .5s ease-out, visibility 0s linear 0s; visibility: visible; opacity: 1; }
+    .back-to-top { position: fixed; right: 30px; bottom: 30px; display: flex; width: 45px; height: 45px; align-items: center; justify-content: center; transition: 0.5s; z-index: 99; }
+    .btn { font-weight: 600; transition: .5s; }
+    .btn-square { width: 32px; height: 32px; }
+    .btn-sm-square { width: 34px; height: 34px; }
+    .btn-md-square { width: 44px; height: 44px; }
+    .btn-lg-square { width: 56px; height: 56px; }
+    .btn-square, .btn-sm-square, .btn-md-square, .btn-lg-square { padding: 0; display: flex; align-items: center; justify-content: center; font-weight: normal; border-radius: 50%; }
+    .topbar { padding: 2px 10px 2px 20px; background: var(--bs-primary) !important; }
+    .navbar-light .navbar-nav .nav-link { font-family: 'Roboto', sans-serif; position: relative; padding: 35px 15px; color: var(--bs-white) !important; font-size: 17px; transition: .5s; }
+    .carousel-header .carousel-inner .carousel-item { position: relative; min-height: 100vh; }
+    .carousel-header .carousel-inner .carousel-item img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption { position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: flex; align-items: center; justify-content: center; text-align: center; background: rgba(0, 0, 0, .4); }
+
+    /* --- ADDED FIXES FOR OVERLAP AND VISIBILITY --- */
+    @media (min-width: 992px) {
+        .navbar-light { position: absolute; width: 100%; top: 0; left: 0; z-index: 999; }
+        /* Pushes "Explore the World" below the transparent navbar */
+        .carousel-header .carousel-inner .carousel-item .carousel-caption {
+            padding-top: 150px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .topbar { display: none; }
+        /* Fixes the "hidden" text on mobile */
+        .carousel-header .carousel-inner .carousel-item img,
+        .carousel-header .carousel-inner .carousel-item .carousel-caption {
+            margin-top: 0 !important; 
+            height: 100vh !important;
+        }
+    }
+</style>
+
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+{% include 'topbar.html' %}
+{% include 'header.html' %}
+
+
+
+{% include 'about.html' %}
+{% include 'services.html' %}
+{% include 'packages.html' %}
+{% include 'travel_news.html' %}
+{% include 'footer.html' %}
+
+<script>
+    window.addEventListener("load", function () {
+        const spinner = document.getElementById("spinner");
+        if (spinner) {
+            spinner.classList.remove("show");
+            setTimeout(() => { spinner.style.display = "none"; }, 500);
+        }
+    });
+</script>
+{% endblock %}

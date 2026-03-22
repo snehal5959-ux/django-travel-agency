@@ -1,0 +1,606 @@
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth.decorators import login_required
+from .models import Feedback, TravelPackage, Favourite, Country, Place
+from django.contrib.admin.views.decorators import staff_member_required
+from django.db.models import Sum
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+
+from .models import (
+    TravelPackage,
+    Booking,
+    Blog,
+    Country,
+    Feedback
+)
+
+from decimal import Decimal
+from datetime import datetime
+from django.utils import timezone
+
+from .models import TravelPackage, Booking, UserProfile
+from .utils import validate_booking, calculate_total_price, generate_flouci_payment
+from .models import Blog, History
+from django.db.models import Q
+import razorpay
+from django.conf import settings
+from django.http import JsonResponse
+from .forms import UserUpdateForm, ProfileUpdateForm
+# views.py
+from datetime import date
+
+
+
+@login_required
+def account_settings(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
+
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, "Your account has been updated successfully!")
+            return redirect('home')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    return render(request, 'account_settings.html', {
+        'u_form': u_form,
+        'p_form': p_form
+    })
+
+
+client = razorpay.Client(
+    auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET)
+)
+
+def create_order(request):
+    data = json.loads(request.body)
+    amount = int(float(data["amount"]) * 100)  # convert to paise
+
+    order = client.order.create({
+        "amount": amount,
+        "currency": "INR",
+        "payment_capture": 1
+    })
+
+    return JsonResponse({
+        "order_id": order["id"],
+        "amount": order["amount"],
+        "key": settings.RAZORPAY_KEY_ID
+    })
+
+
+
+# ADMIN – LIST ALL PACKAGES
+@login_required
+def admin_package_list(request):
+    packages = TravelPackage.objects.all().order_by('-id')
+    return render(request, 'package_list.html', {
+        'packages': packages
+    })
+
+
+# ADMIN – ADD NEW PACKAGE
+@login_required
+def admin_add_package(request):
+    if request.method == 'POST':
+        form = TravelPackageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('admin_package_list')
+    else:
+        form = TravelPackageForm()
+
+    return render(request, 'package_form.html', {
+        'form': form,
+        'title': 'Add New Package'
+    })
+
+
+# ADMIN – DELETE PACKAGE
+@login_required
+def admin_delete_package(request, pk):
+    package = get_object_or_404(TravelPackage, pk=pk)
+
+    if request.method == 'POST':
+        package.delete()
+        return redirect('admin_package_list')
+
+    return render(request, 'package_confirm_delete.html', {
+        'package': package
+    })
+
+
+
+@login_required
+def profile(request):
+    user = request.user  # Django User object
+
+    try:
+        profile = user.userprofile  # fetch the related UserProfile
+    except UserProfile.DoesNotExist:
+        profile = None  # if profile does not exist
+
+    context = {
+        'user': user,
+        'profile': profile,
+    }
+    return render(request, 'profile.html', context)
+
+
+def search_packages(request):
+    query = request.GET.get('q', '').strip()
+
+    if not query:
+        return redirect('travel_package_list')
+
+    packages = TravelPackage.objects.filter(
+        Q(destination__icontains=query) |
+        Q(name__icontains=query)
+    )
+
+    # If only ONE package found → redirect to booking page
+    if packages.count() == 1:
+        return redirect('booking_handler_view', package_id=packages.first().id)
+
+    # If MULTIPLE packages → show filtered package list
+    return render(request, 'package_list.html', {
+        'packages': packages,
+        'search_query': query
+    })
+
+
+# --------------------- HOME ---------------------
+def home(request):
+    packages = TravelPackage.objects.all()
+    countries = Country.objects.all()
+    ratings_range = range(1, 6)
+
+    return render(request, 'travel_package_list.html', {
+        'packages': packages,
+        'ratings_range': ratings_range,
+        'countries': countries
+    })
+
+
+
+# --------------------- REGISTER ---------------------
+def register(request):
+    if request.method == "POST":
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        phone = request.POST.get('phone', '').strip()
+        password = request.POST.get('password', '').strip()
+        confirm = request.POST.get('confirm', '').strip()
+
+        if not all([name, email, phone, password, confirm]):
+            messages.error(request, "All fields are required")
+            return redirect('register')
+
+        if password != confirm:
+            messages.error(request, "Passwords do not match")
+            return redirect('register')
+
+        if User.objects.filter(username=email).exists():
+            messages.error(request, "Email already registered")
+            return redirect('register')
+
+        user = User.objects.create_user(
+            username=email,
+            email=email,
+            password=password,
+            first_name=name
+        )
+
+        UserProfile.objects.create(user=user, phone=phone)
+
+        messages.success(request, "Registration successful 🎉 Please login")
+        return redirect('login')
+
+    return render(request, 'register.html')
+
+
+# --------------------- LOGIN ---------------------
+def login(request):
+    if request.method == "POST":
+     if request.method == "POST":
+        email = request.POST.get('email', '').strip()
+        password = request.POST.get('password', '').strip()
+
+        try:
+            user_obj = User.objects.get(email=email)
+            user = authenticate(request, username=user_obj.username, password=password)
+        except User.DoesNotExist:
+            user = None
+
+        if user is not None:
+            auth_login(request, user)
+            messages.success(request, "Login successful 🎉")
+            return redirect('home')
+        else:
+            messages.error(request, "Invalid email or password")
+            return redirect('login')
+
+    return render(request, 'login.html')
+# --------------------- LOGOUT ---------------------
+def logout_view(request):
+    logout(request)
+    messages.success(request, "Logged out successfully")
+    return redirect('login')
+
+
+# --------------------- CONTACT ---------------------
+def contact(request):
+    return render(request, 'contact.html')
+
+
+# --------------------- PACKAGE LIST ---------------------
+def travel_package_list(request):
+    packages = TravelPackage.objects.all()
+    ratings_range = range(1, 6)
+    return render(request, 'travel_package_list.html', {
+        'packages': packages,
+        'ratings_range': ratings_range
+    })
+
+
+# --------------------- BOOK PACKAGE ---------------------
+@login_required
+def book_package(request, pk):
+    package = get_object_or_404(TravelPackage, pk=pk)
+    return render(request, 'travel_package_booking.html', {'package': package})
+
+
+# --------------------- BOOKING HANDLER ---------------------
+
+@login_required
+def booking_handler_view(request, package_id):
+    package = get_object_or_404(TravelPackage, id=package_id)
+    child_discount = Decimal('0.5')
+
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        booking_date = request.POST.get('datetime', '').strip()
+        num_adults = int(request.POST.get('SelectPerson', 0))
+        num_children = int(request.POST.get('SelectKids', 0))
+        gender = request.POST.get('SelectGender', 'None')
+        payment_method = request.POST.get('payment_method', 'Cash')
+        consent = request.POST.get('consent', '')
+
+        errors = validate_booking(
+            name, email, booking_date,
+            num_adults, num_children,
+            payment_method, consent
+        )
+
+        if errors:
+            return render(request, 'travel_package_booking.html', {
+                'package': package,
+                'errors': errors
+            })
+
+        total_price = calculate_total_price(
+            package, num_adults, num_children, child_discount
+        )
+
+        booking = Booking.objects.create(
+    user=request.user,          # ⭐ THIS FIXES THE ERROR
+    package=package,
+    name=name,
+    email=email,
+    datetime=datetime.strptime(booking_date, '%Y-%m-%d'),
+    num_adults=num_adults,
+    num_children=num_children,
+    total_price=total_price,
+    gender=gender,
+    payment_status='Pending',
+    payment_method=payment_method
+)
+        
+
+        if payment_method == "Online":
+            payment_url = generate_flouci_payment(total_price)
+            if payment_url:
+                booking.payment_status = 'Paid'
+                booking.save()
+                return HttpResponseRedirect(payment_url)
+            else:
+                booking.delete()
+                return redirect('booking_fail')
+
+        return redirect('booking_success')
+
+    return render(request, 'travel_package_booking.html', {'package': package})
+
+
+
+def create_order(request):
+    data = json.loads(request.body)
+    amount = int(float(data["amount"]) * 100)  # convert to paise
+
+    order = client.order.create({
+        "amount": amount,
+        "currency": "INR",
+        "payment_capture": 1
+    })
+
+    return JsonResponse({
+        "order_id": order["id"],
+        "amount": order["amount"],
+        "key": settings.RAZORPAY_KEY_ID
+    })
+
+@csrf_exempt
+def razorpay_payment_success(request):
+    data = json.loads(request.body)
+
+    booking = Booking.objects.get(
+        razorpay_order_id=data['razorpay_order_id']
+    )
+
+    booking.payment_status = 'Paid'
+    booking.transaction_id = data['razorpay_payment_id']
+    booking.paid_at = timezone.now()
+    booking.save()
+
+    return JsonResponse({"status": "success"})
+
+
+
+# --------------------- BOOKING RESULT ---------------------
+def booking_success(request):
+    return render(request, 'booking_success.html')
+
+
+def booking_fail(request):
+    return render(request, 'booking_fail.html')
+
+
+# --------------------- RECOMMENDATIONS ---------------------
+def packages_recommendations(request):
+    packages = TravelPackage.objects.filter(available=True)
+
+    price = request.GET.get('price')
+    category = request.GET.get('category')
+
+    if price == 'low':
+        packages = packages.filter(price__lt=10000)
+    elif price == 'medium':
+        packages = packages.filter(price__gte=10000, price__lte=30000)
+    elif price == 'high':
+        packages = packages.filter(price__gt=30000)
+
+    if category:
+        packages = packages.filter(package_type=category)
+
+    return render(request, 'recommendations.html', {
+        'packages': packages,
+        'selected_price': price,
+        'selected_category': category,
+    })
+
+
+# --------------------- STATIC PAGES ---------------------
+def blog(request):
+    return render(request, 'blog.html')
+
+
+def terms(request):
+    return render(request, 'terms.html')
+
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+
+# --------------------- PAYMENT REDIRECT ---------------------
+def payment_redirect(request, method):
+    if method == "visa":
+        return redirect("https://www.visa.co.in/pay-with-visa.html")
+    elif method == "mastercard":
+        return redirect("https://www.mastercard.co.in/en-in.html")
+    elif method == "paypal":
+        return redirect("https://www.paypal.com/in/signin")
+    else:
+        return redirect("/")
+
+
+
+
+def blog_detail(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
+    return render(request, 'blog_detail.html', {'blog': blog})
+
+
+def blog_detail(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
+    return render(request, 'blog_detail.html', {'blog': blog})
+
+def blog_list(request):
+    blogs = Blog.objects.all()
+    return render(request, 'blog.html', {'blogs': blogs})
+
+
+@login_required
+def feedback_view(request):
+    packages = TravelPackage.objects.all()  # For dropdown selection
+
+    if request.method == "POST":
+        name = request.POST.get('name', '').strip()
+        package_id = request.POST.get('package')
+        message = request.POST.get('message', '').strip()
+        rating = int(request.POST.get('rating', 5))
+
+        if not name or not message or not rating:
+            messages.error(request, "Please fill in all required fields.")
+            return redirect('feedback')
+
+        package = TravelPackage.objects.filter(id=package_id).first() if package_id else None
+
+        Feedback.objects.create(
+            user=request.user,
+            name=name,
+            package=package,
+            message=message,
+            rating=rating
+        )
+
+        messages.success(request, "Thank you for your feedback!")
+        return redirect('home')
+
+    return render(request, 'feedback.html', {'packages': packages})
+
+
+@login_required
+def booking_history_view(request):
+    bookings = Booking.objects.filter(
+        user=request.user
+    ).order_by('-created_at')
+
+    return render(request, 'history.html', {
+        'bookings': bookings
+    })
+
+
+@login_required
+def cancel_booking_view(request, booking_id):
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        user=request.user
+    )
+
+    if booking.payment_status != 'Cancelled':
+        booking.payment_status = 'Cancelled'
+        booking.save()
+        messages.warning(request, 'Booking cancelled.')
+
+    return redirect('history')
+
+
+
+def add_to_favourites(request, package_id):
+    package = get_object_or_404(TravelPackage, id=package_id)
+    fav, created = Favourite.objects.get_or_create(user=request.user, package=package)
+    if created:
+        messages.success(request, "Added to favourites ❤️")
+    else:
+        messages.info(request, "Already in favourites")
+    return redirect(request.META.get('HTTP_REFERER', 'home'))
+
+def remove_from_favourites(request, package_id):
+    fav = Favourite.objects.filter(user=request.user, package_id=package_id)
+    if fav.exists():
+        fav.delete()
+        messages.success(request, "Removed from favourites ❌")
+    else:
+        messages.info(request, "Not in favourites")
+    return redirect('favourites_list')
+
+
+def favourites_list(request):
+    fav_packages = Favourite.objects.filter(user=request.user)
+    return render(request, 'favourites.html', {'fav_packages': fav_packages})
+
+def travel_package_list(request):
+    packages = TravelPackage.objects.all()
+    ratings_range = range(1, 6)
+    return render(request, 'travel_package_list.html', {
+        'packages': packages,
+        'ratings_range': ratings_range
+    })
+
+def travel_package_detail(request, package_id):
+    """
+    Displays the details of a single travel package in a card or page format.
+    """
+    package = get_object_or_404(TravelPackage, id=package_id)
+    ratings_range = range(1, 6)  # For star rating display
+
+    context = {
+        'package': package,
+        'ratings_range': ratings_range
+    }
+
+    return render(request, 'details.html', context)
+
+def travel_news_list(request):
+    return render(request, 'travel_news_list.html')
+
+def countries(request):
+    return render(request, 'countries.html', {
+        'countries': Country.objects.all()
+    })
+
+
+def country_places(request, country_name):
+  country = get_object_or_404(Country, name=country_name)
+  places = [
+    {
+        "name": country.place1_name,
+        "image": country.place1_image,
+        "description": country.place1_description
+    },
+    {
+        "name": country.place2_name,
+        "image": country.place2_image,
+        "description": country.place2_description
+    },
+    {
+        "name": country.place3_name,
+        "image": country.place3_image,
+        "description": country.place3_description
+    },
+    {
+        "name": country.place4_name,
+        "image": country.place4_image,
+        "description": country.place4_description
+    },
+]
+  places = [p for p in places if p["name"]]
+  return render(request, 'country_places.html', {
+        'country': country,
+        'places': places
+    })
+
+@login_required
+def cancel_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+    if request.method == "POST":
+        booking.payment_status = "Cancelled"
+        booking.cancel_reason = request.POST.get('cancel_reason')
+        booking.cancelled_at = timezone.now()
+        booking.save()
+
+
+        messages.success(request, "Booking cancelled successfully.")
+        return redirect('booking_history_view')
+
+    return render(request, 'booking_cancel.html', {'booking': booking})
+
+@login_required
+def refund_booking(request, booking_id):
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        user=request.user,
+        refund_status='Pending'
+    )
+
+    
+
+    booking.refund_status = 'Refunded'
+    booking.refunded_at = timezone.now()
+    booking.save()
+
+    messages.success(request, "Refund processed successfully 💸")
+    return redirect('booking_history_view')

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'topbar.html' %}
+
+<style>
+
+.blog-item{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blog-item img{
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-content h4{
+    min-height: 60px;
+}
+
+.blog-content p{
+    flex-grow: 1;
+}
+
+</style>
+
+
+
+<div id="news" class="container-fluid blog py-5">
+    <div class="container py-5">
+
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">Travel News</h5>
+            <h1 class="mb-4">Latest Travel News</h1>
+            <p class="mb-0">
+                Stay updated with travel-related news and announcements.
+            </p>
+        </div>
+
+        {% if page_obj %}
+        <div class="row g-4 justify-content-center">
+
+            {% for article in page_obj %}
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-item">
+
+                    {% if article.image_url %}
+<img class="img-fluid w-100 rounded-top"
+     src="{{ article.image_url }}"
+     alt="{{ article.title }}">
+{% endif %}
+<a href="{{ article.link }}"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn btn-outline-primary rounded-pill py-2 px-4">
+   Visit Site
+</a>
+                    <div class="blog-content border rounded-bottom p-4">
+                        <small class="text-muted">
+                            <i class="fa fa-calendar-alt me-2"></i>
+                            {{ article.created_at|date:"d M Y" }}
+                        </small>
+
+                        <h4 class="my-3">{{ article.title }}</h4>
+
+                        <p>{{ article.content|truncatewords:20 }}</p>
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="text-center mt-4">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span class="mx-3">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+            {% endif %}
+        </div>
+
+        {% else %}
+        <p class="text-center">No travel news available.</p>
+        {% endif %}
+
+    </div>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}

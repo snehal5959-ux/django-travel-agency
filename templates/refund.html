@@ -1,0 +1,20 @@
+<td>
+    {% if booking.payment_status != 'Cancelled' %}
+        <a href="{% url 'cancel_booking' booking.id %}" class="btn-cancel">
+            Cancel
+        </a>
+
+    {% elif booking.refund_status == 'Pending' %}
+        <a href="{% url 'refund_booking' booking.id %}"
+           class="btn-cancel"
+           style="background-color:#198754;">
+           Refund
+        </a>
+
+    {% elif booking.refund_status == 'Refunded' %}
+        <span style="color:#198754;font-weight:600;">Refunded</span>
+
+    {% else %}
+        —
+    {% endif %}
+</td>

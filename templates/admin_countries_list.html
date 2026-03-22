@@ -1,0 +1,30 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<h3 class="mb-3">Countries</h3>
+
+<a href="{% url 'admin_add_country' %}" class="btn btn-primary mb-3">
+    + Add Country
+</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for country in countries %}
+    <tr>
+        <td>{{ country.name }}</td>
+        <td>
+            <a href="{% url 'admin_edit_country' country.id %}" class="btn btn-sm btn-warning">Edit</a>
+            <a href="{% url 'admin_delete_country' country.id %}" class="btn btn-sm btn-danger"
+               onclick="return confirm('Delete this country?')">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="2">No countries found</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

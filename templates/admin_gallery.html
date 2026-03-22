@@ -1,0 +1,75 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+<h3 class="mb-4">Gallery Manager</h3>
+
+<!-- ADD IMAGE FORM -->
+<div class="card p-4 mb-4">
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+<div class="row">
+
+<div class="col-md-4">
+<label>Title</label>
+<input type="text" name="title" class="form-control" required>
+</div>
+
+<div class="col-md-4">
+<label>Description</label>
+<input type="text" name="description" class="form-control">
+</div>
+
+<div class="col-md-4">
+<label>Image</label>
+<input type="file" name="image" class="form-control" required>
+</div>
+
+</div>
+
+<button class="btn btn-primary mt-3">Add Image</button>
+
+</form>
+</div>
+
+<!-- GALLERY GRID -->
+
+<div class="row">
+
+{% for img in gallery %}
+
+<div class="col-md-3 mb-4">
+
+<div class="card shadow-sm">
+
+<img src="{{ img.image.url }}" class="card-img-top" style="height:200px; object-fit:cover;">
+
+<div class="card-body text-center">
+
+<h6>{{ img.title }}</h6>
+
+<p class="small text-muted">{{ img.description }}</p>
+
+<a href="{% url 'delete_gallery' img.id %}" 
+class="btn btn-danger btn-sm"
+onclick="return confirm('Delete this image?')">
+Delete
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

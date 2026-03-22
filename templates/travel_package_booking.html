@@ -1,0 +1,393 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'topbar.html' %}
+
+<style>
+
+/* ---------- Background ---------- */
+.booking {
+    position: relative;
+    background: linear-gradient(rgba(19,53,123,0.85), rgba(19,53,123,0.85)),
+                url('/static/img/booking-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ---------- Left Card ---------- */
+.packages-item {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.package-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+
+/* ---------- Booking Form Card ---------- */
+.booking form {
+    background: rgba(255,255,255,0.12);
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* ---------- Inputs ---------- */
+.form-control,
+.form-select {
+    border-radius: 30px;
+    padding: 12px 18px;
+    border: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 3px rgba(19,53,123,0.3);
+}
+
+/* ---------- Price Box ---------- */
+.price-box {
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.price-pill {
+    background: #13357B;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+    border-radius: 30px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.btn-success {
+    border-radius: 30px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+/* ---------- Terms ---------- */
+.terms-box {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.terms-box a {
+    color: #ffd369;
+    text-decoration: none;
+}
+
+.terms-box a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<div id="book" class="container-fluid booking py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+
+            <!-- LEFT -->
+            <div class="col-lg-6">
+                <h5 class="section-booking-title text-white">Booking</h5>
+                <h1 class="text-white mb-4">{{ package.name }} Trip</h1>
+
+                <div class="packages-item position-relative">
+                    <img src="/media/{{ package.image }}" 
+                         class="img-fluid w-100">
+
+                    <div class="package-overlay">
+                        <h5 class="text-white fw-bold">
+                            {{ package.name }}
+                        </h5>
+                        <p class="text-light small mb-0">
+                            {{ package.description|truncatewords:30 }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-lg-6">
+                <h5 class="section-booking-title text-white mb-4">
+                    Your Infos
+                </h5>
+
+                <form method="POST" action="{% url 'booking_handler_view' package.id %}">
+                    {% csrf_token %}
+
+                    <input type="hidden" id="unit-price-value" value="{{ package.price }}">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="form-group">
+    
+    <textarea name="address" class="form-control" placeholder="Address" required></textarea>
+</div>
+
+                        
+
+                        <div class="col-md-6">
+                            <input type="date" id="trip-date" name="datetime" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <select name="SelectGender" class="form-select">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <select id="SelectPerson" name="SelectPerson" class="form-select">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Persons</option>
+                                <option value="3">3 Persons</option>
+                                <option value="4">4 Persons</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <select id="SelectKids" name="SelectKids" class="form-select">
+                                <option value="0">No Kids</option>
+                                <option value="1">1 Kid</option>
+                                <option value="2">2 Kids</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <select id="payment_method" name="payment_method" class="form-select"required>
+                                <option value="">Select Payment Method</option>
+                                <option value="On Site">On Site</option>
+                                <option value="Online">Online</option>
+                            </select>
+                        </div>
+
+                        <!-- PRICE BOX -->
+                        <div class="col-12">
+                            <div class="price-box p-4">
+
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fw-semibold" style="color: black;">Unit Price</span>
+                                    <span class="price-pill">
+                                        {{ package.price }} INR
+                                    </span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-semibold" style="color: black;">Total Price</span>
+                                    <span class="price-pill" id="total-price">
+                                        {{ package.price }} INR
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ONLINE PAYMENT -->
+                        <div class="col-12" id="online-payment" style="display:none;">
+                            <button type="button" id="paySecurelyBtn"
+                                    class="btn btn-success w-100">
+                                Pay Securely with Razorpay
+                            </button>
+                        </div>
+
+                        <!-- TERMS -->
+                        <div class="col-12">
+                            <div class="terms-box">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" 
+                                           id="termsCheck" name="terms" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I have read and agree to the 
+                                        <a href="{% url 'terms' %}">Terms & Conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT -->
+                        <div class="col-12" id="book-now-box" style="display:none;">
+    <button type="button" id="bookNowBtn" class="btn btn-primary w-100">
+        Book Now
+    </button>
+</div>
+                    
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector("form");
+    const paymentMethod = document.getElementById("payment_method");
+    const onlineBox = document.getElementById("online-payment");
+    const bookNowBox = document.getElementById("book-now-box");
+    const persons = document.getElementById("SelectPerson");
+    const kids = document.getElementById("SelectKids");
+    const totalPriceEl = document.getElementById("total-price");
+    const unitPrice = parseFloat(document.getElementById("unit-price-value").value);
+
+    const payBtn = document.getElementById("paySecurelyBtn");
+    const bookBtn = document.getElementById("bookNowBtn");
+
+    // ===== DATE VALIDATION =====
+const tripDate = document.getElementById("trip-date");
+
+// get today's date
+const today = new Date().toISOString().split("T")[0];
+
+// prevent selecting past dates
+tripDate.setAttribute("min", today);
+
+// extra protection if user manually edits date
+tripDate.addEventListener("change", function () {
+
+    const selectedDate = new Date(this.value);
+    const todayDate = new Date(today);
+
+    if (selectedDate < todayDate) {
+        alert("You cannot select a past date for booking.");
+        this.value = "";
+    }
+
+});
+
+    // ===== PRICE CALCULATION =====
+    function calculate() {
+        let adults = parseInt(persons.value);
+        let children = parseInt(kids.value);
+        let total = (adults * unitPrice) + (children * unitPrice * 0.5);
+        totalPriceEl.innerText = total.toFixed(2) + " INR";
+    }
+
+    persons.addEventListener("change", calculate);
+    kids.addEventListener("change", calculate);
+    calculate();
+
+    // ===== SHOW BUTTONS =====
+    paymentMethod.addEventListener("change", function () {
+        if (this.value === "Online") {
+            onlineBox.style.display = "block";
+            bookNowBox.style.display = "none";
+        } 
+        else if (this.value === "On Site") {
+            onlineBox.style.display = "none";
+            bookNowBox.style.display = "block";
+        } 
+        else {
+            onlineBox.style.display = "none";
+            bookNowBox.style.display = "none";
+        }
+    });
+
+    paymentMethod.dispatchEvent(new Event("change"));
+
+    // ===== BOOK NOW FLOW =====
+    bookBtn.onclick = function () {
+
+        // browser validation
+        if (!form.reportValidity()) {
+            return;
+        }
+
+        form.submit();
+    };
+
+    // ===== ONLINE PAYMENT FLOW =====
+    payBtn.onclick = async function () {
+
+        // browser validation
+        if (!form.reportValidity()) {
+            return;
+        }
+
+        const formData = new FormData(form);
+
+        // Step 1: Create Booking
+        const response = await fetch(form.action, {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}"
+            },
+            body: formData
+        });
+
+        const bookingData = await response.json();
+
+        if (!bookingData.booking_id) {
+            alert("Booking failed.");
+            return;
+        }
+
+        let total = bookingData.total_price * 100;
+
+        // Step 2: Create Razorpay Order
+        const orderResponse = await fetch("{% url 'create_razorpay_order' %}", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": "{{ csrf_token }}"
+            },
+            body: JSON.stringify({ amount: total })
+        });
+
+        const orderData = await orderResponse.json();
+
+        // Step 3: Open Razorpay
+        const options = {
+            key: orderData.key,
+            amount: orderData.amount,
+            currency: "INR",
+            name: "Pandurang Travels",
+            order_id: orderData.order_id,
+
+            handler: function () {
+    window.location.href = "{% url 'payment_success' 0 %}".replace("0", bookingData.booking_id);
+},
+
+            theme: {
+                color: "#13357B"
+            }
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+    };
+
+});
+</script>
+{% include 'footer.html' %}
+{% endblock %}
+
+
+

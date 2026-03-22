@@ -1,0 +1,205 @@
+     body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .blog-hero {
+            background: linear-gradient(rgb(24, 24, 101), rgb(36, 36, 121)),
+                        url("{% static 'img/blog-hero.jpg' %}") center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+        /* Blog Card */
+        .blog-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .blog-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .blog-title {
+            font-weight: 600;
+            color: #212529;
+        }
+
+        .blog-btn {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 30px;
+            padding: 8px 20px;
+            text-decoration: none;
+        }
+
+        .blog-btn:hover {
+            background-color: #084298;
+            color: white;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .sidebar h5 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .category a {
+            display: block;
+            color: #495057;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .category a:hover {
+            color: #0d6efd;
+        }
+
+             * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+        }
+
+        /* Top Navigation */
+        .top-bar {
+            background: #0b2c66;
+            color: #fff;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .top-bar nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .top-bar nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Section */
+        .login-section {
+            height: calc(100vh - 70px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login Card */
+        .login-card {
+            background: #ffffff;
+            width: 380px;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            color: #0b2c66;
+            margin-bottom: 8px;
+        }
+
+        .login-card p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Form */
+        .form-group {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0b2c66;
+        }
+
+        /* Button */
+        .login-btn {
+            width: 100%;
+            background: #0b2c66;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #093063;
+        }
+
+        /* Extra Links */
+        .extra-links {
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .extra-links a {
+            color: #0b2c66;
+            text-decoration: none;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+        }

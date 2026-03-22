@@ -1,0 +1,41 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+<h3 class="mb-4">Dashboard</h3>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card dashboard-card shadow text-center p-4">
+            <i class="fa fa-suitcase fa-2x text-primary mb-2"></i>
+            <h5>Total Packages</h5>
+            <h3>{{ total_packages }}</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card dashboard-card shadow text-center p-4">
+            <i class="fa fa-calendar-check fa-2x text-success mb-2"></i>
+            <h5>Bookings</h5>
+            <h3>{{ total_bookings }}</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card dashboard-card shadow text-center p-4">
+            <i class="fa fa-users fa-2x text-warning mb-2"></i>
+            <h5>Users</h5>
+            <h3>{{ total_users }}</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card dashboard-card shadow text-center p-4">
+            <i class="fa fa-indian-rupee-sign fa-2x text-danger mb-2"></i>
+            <h5>Revenue</h5>
+            <h3>₹ {{ total_revenue }}</h3>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

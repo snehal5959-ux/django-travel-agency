@@ -1,0 +1,141 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<style>
+/* Center cards container */
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+/* Single package card */
+.package-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Package image */
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card content */
+.package-content {
+    padding: 20px;
+}
+
+.package-content h3 {
+    font-size: 1.25rem;
+    color: #13357B; /* Your theme blue */
+    margin-bottom: 10px;
+}
+
+.package-content p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Price badge */
+.package-price {
+    font-weight: bold;
+    color: #fff;
+    background-color: #0d6efd; /* Theme blue button */
+    padding: 8px 12px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Star rating */
+.star-rating {
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+/* Book Now button */
+.btn-book {
+    display: flex;
+    width: 100%;
+    background-color: #13357B;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #0d6efd;
+}
+</style>
+
+
+<div class="container py-5">
+    <div class="card mx-auto" style="max-width: 700px;">
+        <img src="/media/{{ package.image }}" class="card-img-top" alt="{{ package.name }}">
+        <div class="card-body">
+            <h3 class="card-title text-primary">{{ package.name }}</h3>
+            
+            <div class="star-rating mb-2">
+                {% for i in ratings_range %}
+                    {% if i <= package.rating %}
+                        <i class="fa fa-star" style="color:#ffc107"></i>
+                    {% else %}
+                        <i class="fa fa-star-o" style="color:#ffc107"></i>
+                    {% endif %}
+                {% endfor %}
+                <span>{{ package.rating }} / 5</span>
+            </div>
+
+            <p class="card-text">{{ package.description }}</p>
+
+            {% if package.supervisor %}
+    <p><strong>Supervisor:</strong> {{ package.supervisor }}</p>
+{% endif %}
+{% if package.food_services %}
+    <p><strong>Food Services:</strong> {{ package.food_services }}</p>
+{% endif %}
+{% if package.mode_of_travelling %}
+    <p><strong>Mode of Travelling:</strong> {{ package.mode_of_travelling }}</p>
+{% endif %}
+{% if package.Hault_details %}
+    <p><strong>Hault Details:</strong> {{ package.Hault_details }}</p>
+{% endif %}
+
+           <div class="d-flex align-items-center gap-3 mt-3">
+    <p class="fw-bold text-white bg-primary d-inline-block px-3 py-2 rounded-pill mb-0">
+        ₹{{ package.price }}
+    </p>
+
+    <a href="{% url 'booking_handler_view' package_id=package.id %}" 
+       class="btn btn-primary rounded-pill mb-0">
+       Book Now
+    </a>
+</div>
+
+</div>  
+</div> 
+</div> 
+
+{% endblock %}
+
+

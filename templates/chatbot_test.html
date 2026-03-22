@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pandurang Travels Chatbot</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<style>
+#pt-chatbot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+.pt-chatbot-toggler {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pt-chatbot {
+  display: none;
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+.pt-chatbot-header {
+  background: #0d6efd;
+  color: #fff;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pt-chatbox {
+  list-style: none;
+  padding: 15px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.pt-chat {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.pt-chat.incoming p {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+.pt-chat.outgoing {
+  justify-content: flex-end;
+}
+
+.pt-chat.outgoing p {
+  background: #0d6efd;
+  color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+.pt-chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.pt-chat-input textarea {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  resize: none;
+  outline: none;
+}
+
+.pt-send-btn {
+  padding: 10px;
+  cursor: pointer;
+  color: #0d6efd;
+}
+</style>
+</head>
+
+<body>
+
+<div id="pt-chatbot-wrapper">
+  <button class="pt-chatbot-toggler">
+    <span class="material-symbols-outlined">travel_explore</span>
+  </button>
+
+  <div class="pt-chatbot">
+    <div class="pt-chatbot-header">
+      <b>Pandurang Travels Assistant</b>
+      <span class="material-symbols-outlined pt-close-btn">close</span>
+    </div>
+
+    <ul class="pt-chatbox" id="chatbox">
+      <li class="pt-chat incoming">
+        <p>Namaskar 🙏<br>I can help with travel packages, pricing, booking & destinations.</p>
+      </li>
+    </ul>
+
+    <div class="pt-chat-input">
+      <textarea id="userInput" placeholder="Ask anything about Pandurang Travels..."></textarea>
+      <span class="material-symbols-outlined pt-send-btn">send</span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===============================
+   CHATBOT KNOWLEDGE BASE
+================================ */
+
+const knowledgeBase = [
+  {
+    keywords: ["packages", "tour", "travel"],
+    answer: "We offer family tours, group tours, temple tours, weekend trips and customized travel packages."
+  },
+  {
+    keywords: ["price", "cost", "charges"],
+    answer: "Package prices depend on destination, duration and number of people. Please tell me the place you want to visit."
+  },
+  {
+    keywords: ["booking", "book", "reserve"],
+    answer: "You can book packages online through our website or visit Pandurang Travels office for assistance."
+  },
+  {
+    keywords: ["contact", "phone", "number"],
+    answer: "You can contact Pandurang Travels via our official phone number or visit our office during working hours."
+  },
+  {
+    keywords: ["hotel", "stay"],
+    answer: "Yes, our packages include comfortable hotel stays based on the selected plan."
+  },
+  {
+    keywords: ["bus", "transport"],
+    answer: "We provide safe and comfortable transport facilities including buses and private vehicles."
+  }
+];
+
+/* ===============================
+   ELEMENT SELECTION (NO NULL)
+================================ */
+
+const toggler = document.querySelector(".pt-chatbot-toggler");
+const chatbot = document.querySelector(".pt-chatbot");
+const closeBtn = document.querySelector(".pt-close-btn");
+const sendBtn = document.querySelector(".pt-send-btn");
+const inputField = document.getElementById("userInput");
+const chatbox = document.getElementById("chatbox");
+
+/* ===============================
+   OPEN / CLOSE CHATBOT
+================================ */
+
+toggler.onclick = () => chatbot.style.display = "block";
+closeBtn.onclick = () => chatbot.style.display = "none";
+
+/* ===============================
+   SEND MESSAGE
+================================ */
+
+sendBtn.onclick = sendMessage;
+inputField.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+function sendMessage() {
+  const userText = inputField.value.trim();
+  if (!userText) return;
+
+  addMessage(userText, "outgoing");
+  inputField.value = "";
+
+  setTimeout(() => {
+    const reply = getBotReply(userText);
+    addMessage(reply, "incoming");
+  }, 400);
+}
+
+function addMessage(text, type) {
+  const li = document.createElement("li");
+  li.className = `pt-chat ${type}`;
+  li.innerHTML = `<p>${text}</p>`;
+  chatbox.appendChild(li);
+  chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+/* ===============================
+   BOT LOGIC
+================================ */
+
+function getBotReply(userText) {
+  const text = userText.toLowerCase();
+
+  for (let item of knowledgeBase) {
+    for (let key of item.keywords) {
+      if (text.includes(key)) {
+        return item.answer;
+      }
+    }
+  }
+  return "Sorry, I didn’t understand that. Please ask about packages, pricing, booking or travel services.";
+}
+</script>
+
+</body>
+</html>

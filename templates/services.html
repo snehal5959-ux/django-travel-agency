@@ -1,0 +1,89 @@
+<div id="services" class="container-fluid bg-light service py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">Services</h5>
+            <h1 class="mb-0">Our Services</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                            <div class="service-content text-end">
+                                <h5 class="mb-4">Booking and Payments</h5>
+                                <p class="mb-0 no-hover-bg"> 
+                                    Easily browse and book your dream travel packages vacation with just a few 
+                                    clicks. Choose packages that best suit your preferences. Secure online 
+                                    payments with instant booking confirmations.
+
+                                </p>
+                                <a href="{% url 'travel_package_list' %}" class="btn btn-primary mt-3">
+        Click Here
+    </a>
+                            </div>
+                            <div class="service-icon p-4">
+                                <i class="fa fa-paper-plane fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
+                            <div class="service-content text-end">
+                                <h5 class="mb-4">Travel News</h5>
+                                <p class="mb-0 no-hover-bg">
+                                    Stay updated with the latest trends and updates in the world of travel. 
+                                    Our system scrapes popular travel websites for travel news, tips, 
+                                    and destination guides. All the latest articles are accessible for you to read at any time.
+                                </p>
+                                <a href="{% url 'travel_news_list' %}" class="btn btn-primary mt-3">
+        Click Here
+    </a>
+                            </div>
+                            <div class="service-icon p-4">
+                                <i class="fa fa-bullhorn fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                            <div class="service-icon p-4">
+                                <i class="fa fa-cogs fa-4x text-primary"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="mb-4">Personalized Recommendations</h5>
+                               <p class="mb-0 no-hover-bg">
+Filter travel packages based on your preferences such as price range and category. This helps you quickly explore suitable options and choose a travel plan that matches your needs for a comfortable and enjoyable journey.
+</p>
+                                <a href="{% url 'packages_recommendations' %}" class="btn btn-primary mt-3">
+        Click Here
+    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                            <div class="service-icon p-4">
+                                <i class="fa fa-headset fa-4x text-primary"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="mb-4">FAQs and Travel Tips</h5>
+                                <p class="mb-0 no-hover-bg">
+Find quick answers to the most commonly asked questions about our travel packages, bookings, payments, and policies. The FAQ section helps you resolve doubts instantly and you can plan your journey with confidence and convenience.
+</p>
+
+                                <a href="{% url 'chat:ai_chat' %}" class="btn btn-primary mt-3">
+        Click Here
+    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>

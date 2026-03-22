@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-4">My Inbox</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Subject</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for msg in messages %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ msg.subject }}</td>
+            <td>
+                {% if msg.is_read %}
+                    <span class="badge bg-secondary">Read</span>
+                {% else %}
+                    <span class="badge bg-success">New</span>
+                {% endif %}
+            </td>
+            <td>{{ msg.created_at }}</td>
+            <td>
+                <a href="{% url 'inbox_message_detail' msg.id %}"
+                   class="btn btn-sm btn-primary">
+                    Open
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">No messages yet.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

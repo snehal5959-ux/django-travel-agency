@@ -1,0 +1,30 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h3>User Messages</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Action</th>
+    </tr>
+
+    {% for msg in messages %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ msg.name }}</td>
+        <td>{{ msg.email }}</td>
+        <td>{{ msg.created_at }}</td>
+        <td>
+            <a href="{% url 'admin_message_detail' msg.id %}" class="btn btn-sm btn-primary">
+                View
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

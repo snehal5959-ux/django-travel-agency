@@ -1,0 +1,116 @@
+{% load static %}
+
+<div class="container-fluid bg-primary px-5 d-none d-lg-block">
+    <div class="row gx-0">
+
+        <!-- LEFT: SOCIAL ICONS -->
+       <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+    <div class="d-inline-flex align-items-center gap-3" style="font-size:18px;">
+
+        <a href="https://www.facebook.com/groups/204029866296029" class="text-light">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/pandurang.travels_4637/?hl=en" class="text-light">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@pandurangtourstravels6886" class="text-light">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+</div>
+
+        <!-- RIGHT: AUTH SECTION -->
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+
+     
+  {% if user.is_authenticated %}
+
+    <!-- USER DROPDOWN -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown">
+            <small>
+                <i class="fa fa-user me-2"></i>{{ user.username }}
+            </small>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-end rounded">
+            <a href="{% url 'profile' %}" class="dropdown-item">
+                <i class="fas fa-user-alt me-2"></i> My Profile
+            </a>
+
+                <a href="{% url 'booking_history_view' %}" class="dropdown-item">
+        <i class="fa fa-history me-2"></i>History
+    </a>
+
+            <a href="{% url 'user_inbox' %}" class="dropdown-item">
+                <i class="fas fa-comment-alt me-2"></i> Inbox
+            </a>
+
+            <a href="{% url 'account_settings' %}" class="dropdown-item">
+                <i class="fas fa-cog me-2"></i> Account Settings
+            </a>
+
+            <a href="{% url 'logout_view' %}" class="dropdown-item">
+                <i class="fas fa-power-off me-2"></i> Log Out
+            </a>
+
+            {% if user.is_staff %}
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'admin_dashboard' %}" class="dropdown-item text-danger">
+                    <i class="fas fa-user-shield me-2"></i> Admin Panel
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+{% else %}
+
+    <!-- REGISTER / LOGIN -->
+    <a href="{% url 'register' %}">
+        <small class="me-3 text-light">
+            <i class="fa fa-user me-2"></i>Register
+        </small>
+    </a>
+
+    <a href="{% url 'login' %}">
+        <small class="me-3 text-light">
+            <i class="fa fa-sign-in-alt me-2"></i>Login
+        </small>
+    </a>
+
+{% endif %}
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    if (!dropdownToggle || !dropdownMenu) return;
+
+    // Toggle dropdown
+    dropdownToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!dropdownToggle.contains(e.target) && 
+            !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+
+});
+</script>

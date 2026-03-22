@@ -1,0 +1,13 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h4>{{ msg.name }} ({{ msg.email }})</h4>
+
+<p><strong>Message:</strong></p>
+<p>{{ msg.message }}</p>
+
+<a href="{% url 'admin_send_response' msg.id %}" class="btn btn-success">
+    Send Response
+</a>
+
+{% endblock %}

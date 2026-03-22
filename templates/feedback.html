@@ -1,0 +1,63 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}Feedback | Pandurang Travels{% endblock %}
+
+{% block content %}
+<div class="feedback-container" style="max-width:600px; margin:50px auto; padding:30px; background:white; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+
+    <h2 style="text-align:center; color:#0b2c66;">Customer Feedback</h2>
+    <p style="text-align:center; color:#555;">Tell us about your travel experience</p>
+
+    <!-- Display messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <p style="text-align:center; font-weight:600; color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+                {{ message }}
+            </p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Name -->
+        <div class="form-group" style="margin-bottom:15px;">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" value="{{ request.user.get_full_name }}" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+        </div>
+
+        <!-- Package -->
+        <div class="form-group" style="margin-bottom:15px;">
+            <label for="package">Package</label>
+            <select id="package" name="package" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                <option value="">Select Package</option>
+                {% for package in packages %}
+                    <option value="{{ package.id }}">{{ package.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Rating -->
+        <div class="form-group" style="margin-bottom:15px;">
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Fair</option>
+                <option value="1">⭐ Poor</option>
+            </select>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group" style="margin-bottom:15px;">
+            <label for="message">Feedback</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your feedback..." style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"></textarea>
+        </div>
+
+        <button type="submit" style="background:#0b2c66; color:white; padding:12px 20px; border:none; border-radius:6px; cursor:pointer; width:100%; font-size:16px;">Submit Feedback</button>
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "navbar.html" %}
+{% block content %}
+
+<h4>Compose New Message</h4>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label>Select User</label>
+        <select name="user_id" class="form-control" required>
+            <option value="">-- Select User --</option>
+            {% for user in users %}
+                <option value="{{ user.id }}">
+                    {{ user.username }} ({{ user.email }})
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Subject</label>
+        <input type="text" name="subject" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Message</label>
+        <textarea name="message" class="form-control" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
+</form>
+
+{% endblock %}

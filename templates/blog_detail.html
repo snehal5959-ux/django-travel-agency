@@ -1,0 +1,116 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+/* ===== BLOG DETAIL STYLING (FIXED SIZE) ===== */
+
+.blog-container{
+    max-width: 800px;   /* reduced from 1000px */
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.blog-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+/* Image */
+.blog-image img{
+    width:100%;
+    height:300px;       /* reduced from 450px */
+    object-fit:cover;
+}
+
+/* Content */
+.blog-content{
+    padding:25px;       /* reduced padding */
+}
+
+/* Title */
+.blog-title{
+    font-size:28px;     /* smaller title */
+    font-weight:700;
+    margin-bottom:8px;
+    color:#222;
+}
+
+/* Date */
+.blog-date{
+    color:#888;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+/* Text */
+.blog-text{
+    font-size:16px;
+    line-height:1.7;
+    color:#444;
+    white-space:pre-line;
+}
+
+/* Back Button */
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:10px 22px;
+    background:#13357B;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#0e2a63;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.blog-title{
+    font-size:22px;
+}
+
+.blog-image img{
+    height:220px;
+}
+
+.blog-content{
+    padding:20px;
+}
+
+}
+
+</style>
+
+<div class="blog-container">
+    <div class="blog-card">
+
+        <div class="blog-image">
+            <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+        </div>
+
+        <div class="blog-content">
+            <h1 class="blog-title">{{ blog.title }}</h1>
+            <p class="blog-date">Published on {{ blog.date }}</p>
+
+            <div class="blog-text">
+                {{ blog.full_content }}
+            </div>
+
+            <a href="{% url 'blog_list' %}" class="back-btn">
+                ← Back to Blogs
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

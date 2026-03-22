@@ -1,0 +1,160 @@
+{% extends "navbar.html" %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #f4f7fb;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .profile-container {
+        max-width: 900px;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .profile-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        padding: 25px;
+        width: 350px;
+        text-align: center;
+    }
+
+    /* Circle Avatar with Initial */
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #0b2c66; /* navy blue */
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+    }
+
+    .profile-card h3 {
+        color: #0b2c66;
+        margin-bottom: 4px;
+        font-size: 22px;
+    }
+
+    .profile-card p.role {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 12px;
+    }
+
+    .profile-card p.joined {
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 15px;
+    }
+
+    .message-btn {
+        background-color: #0b2c66;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 25px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .message-btn:hover {
+        background-color: #093063;
+    }
+
+    .profile-info {
+        text-align: left;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .profile-info h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #0b2c66;
+    }
+
+    .profile-info p {
+        margin: 5px 0;
+    }
+
+    .profile-info span.label {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .no-data {
+        text-align: center;
+        color: #666;
+        margin-top: 30px;
+    }
+    
+    .btn-primary {
+        background-color: #0b2c66 !important;
+        border-color: #0b2c66 !important;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #093063 !important;
+        border-color: #093063 !important;
+    }
+
+</style>
+
+<div class="profile-container">
+    {% if user.is_authenticated %}
+        <div class="profile-card">
+            <!-- Circle Avatar with Initial -->
+            <div class="profile-avatar">
+                {{ user.first_name|default:user.username|slice:":1"|upper }}
+            </div>
+
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <p class="role">{{ profile.role|default:"User" }}</p>
+            <p class="joined">Joined {{ user.date_joined|date:"F Y" }}</p>
+
+        <a href="{% url 'account_settings' %}" 
+   class="btn btn-primary px-4 py-2 rounded-pill">
+    Account Settings
+</a>
+
+
+            <div class="profile-info">
+                <h4>Personal Information</h4>
+                <p><span class="label">Username:</span> {{ user.username }}</p>
+                <p><span class="label">Email:</span> {{ user.email }}</p>
+                {% if profile %}
+                    {% if profile.phone %}
+                        <p><span class="label">Phone:</span> {{ profile.phone }}</p>
+                    {% endif %}
+                    {% if profile.gender %}
+                        <p><span class="label">Gender:</span> {{ profile.gender }}</p>
+                    {% endif %}
+                    {% if profile.company %}
+                        <p><span class="label">Company:</span> {{ profile.company }}</p>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    {% else %}
+        <p class="no-data">You need to <a href="{% url 'login' %}">login</a> to view your profile.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

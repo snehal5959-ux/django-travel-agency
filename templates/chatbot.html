@@ -1,0 +1,212 @@
+<!-- {% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+.faq-container{
+    max-width: 950px;
+    margin: 80px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-heading h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.faq-heading p{
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.faq-item{
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s ease;
+}
+
+.faq-question{
+    padding: 18px 22px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover{
+    background: #f8f9fa;
+}
+
+.faq-answer{
+    display: none;
+    padding: 18px 22px;
+    border-top: 1px solid #eee;
+    color: #555;
+    line-height: 1.7;
+    font-size: 15px;
+    background: #fafafa;
+}
+
+.arrow{
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+</style>
+
+<div class="faq-container">
+
+    <div class="faq-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about booking and travelling with Pandurang Travels.</p>
+    </div>
+
+    FAQ ITEMS
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What is Pandurang Travels and what services do you provide?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Pandurang Travels is a professional travel agency offering domestic and international tour packages. 
+            Our services include customized travel planning, hotel reservations, transport arrangements, 
+            sightseeing coordination, honeymoon packages, group tours, and corporate travel management. 
+            We focus on comfort, safety, and affordability to ensure a stress-free travel experience.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            How can I book a travel package?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Booking is simple. Select your preferred package from our website, fill out the booking form 
+            with travel dates and passenger details, and complete the payment process. Once payment is 
+            confirmed, our team will send you booking confirmation and itinerary details via email or phone.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Can I customize my tour package according to my budget?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Yes. We specialize in customized travel planning. You can modify hotel category, 
+            transportation type, sightseeing options, and meal preferences based on your budget 
+            and personal travel requirements.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What is included in a standard travel package?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Most packages include accommodation, local transportation, selected sightseeing tours, 
+            and basic meal plans (usually breakfast). However, inclusions vary by destination and 
+            package type. Please check individual package details before booking.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What documents are required for travel?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            For domestic travel, a valid government-issued ID proof is required. 
+            For international travel, a valid passport and visa (if applicable) are mandatory. 
+            We also recommend carrying printed and digital copies of all booking confirmations.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What precautions should I take while travelling?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Always keep your valuables secure, avoid sharing personal booking details publicly, 
+            stay hydrated, follow local safety guidelines, and keep emergency contact numbers handy. 
+            It is advisable to purchase travel insurance for additional protection.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What are some important travel tips?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            • Pack light but smart  
+            • Arrive early at airports or stations  
+            • Keep copies of important documents  
+            • Inform your bank before international travel  
+            • Research local weather conditions before departure  
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What is your cancellation and refund policy?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Cancellation charges depend on how early the request is made before departure. 
+            Refund policies vary depending on hotel, airline, and transport provider terms. 
+            Detailed policy information will be shared at the time of booking confirmation.
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(question => {
+    question.addEventListener("click", function() {
+
+        const answer = this.nextElementSibling;
+        const arrow = this.querySelector(".arrow");
+
+        document.querySelectorAll(".faq-answer").forEach(a => {
+            if(a !== answer){
+                a.style.display = "none";
+            }
+        });
+
+        document.querySelectorAll(".arrow").forEach(a => {
+            if(a !== arrow){
+                a.classList.remove("rotate");
+            }
+        });
+
+        if(answer.style.display === "block"){
+            answer.style.display = "none";
+            arrow.classList.remove("rotate");
+        } else {
+            answer.style.display = "block";
+            arrow.classList.add("rotate");
+        }
+    });
+});
+</script>
+
+{% endblock %} -->

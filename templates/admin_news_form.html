@@ -1,0 +1,53 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<h3 class="mb-4">{{ title }}</h3>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        {{ form.title.label_tag }}
+        {{ form.title }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.link.label_tag }}
+        {{ form.link }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.category.label_tag }}
+        {{ form.category }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.published_date.label_tag }}
+        {{ form.published_date }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.read_time.label_tag }}
+        {{ form.read_time }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.image_url.label_tag }}
+        {{ form.image_url }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.content.label_tag }}
+        {{ form.content }}
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Save
+    </button>
+
+    <a href="{% url 'admin_news_list' %}" class="btn btn-secondary">
+        Cancel
+    </a>
+</form>
+
+{% endblock %}

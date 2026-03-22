@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Pandurang Travels{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            padding-top:80px; /* prevents overlap */
+        }
+
+        .navbar{
+            height:80px;
+            background-color:#123c7c !important; /* NAVY BLUE */
+        }
+
+        /* BRAND */
+        .navbar-brand{
+            color:#fff !important;
+        }
+
+        /* NAV LINKS */
+        .navbar .nav-link{
+            color:#fff !important;
+            font-weight:500;
+        }
+
+        .navbar .nav-link:hover{
+            color:#e6eeff !important;
+        }
+
+        /* SOCIAL ICONS */
+        .social-icons a{
+            color:#fff;
+            font-size:16px;
+            margin-right:14px;
+            transition:0.3s ease;
+        }
+
+        .social-icons a:hover{
+            color:#dbe6ff;
+            transform:translateY(-2px);
+        }
+
+        /* DROPDOWN */
+        .dropdown-menu{
+            border-radius:10px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+
+        <!-- ===== LEFT: SOCIAL MEDIA ICONS ===== -->
+        <div class="d-none d-lg-flex social-icons align-items-center">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/pandurangatravels/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@pandurangtourstravels6886"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- ===== BRAND ===== -->
+        <a class="navbar-brand fw-bold ms-lg-3" href="/">
+            Pandurang Travels
+        </a>
+
+        <!-- ===== TOGGLER ===== -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- ===== RIGHT MENU ===== -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home-index' %}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home-index' %}#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home-index' %}#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home-index' %}#packages">Packages</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'travel_news_list' %}">News</a>
+                </li>
+
+                {% if user.is_authenticated %}
+  <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown">
+                            <small>
+                                <i class="fa fa-user me-2"></i>{{ user.username }}
+                            </small>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end rounded">
+                            <a href="{% url 'profile' %}" class="dropdown-item">
+                                <i class="fas fa-user-alt me-2"></i> My Profile
+                            </a>
+                                   <a href="{% url 'booking_history_view' %}" class="dropdown-item">
+        <i class="fa fa-history me-2"></i>History
+    </a>
+                            <a href="{% url 'user_inbox' %}" class="dropdown-item">
+                                <i class="fas fa-comment-alt me-2"></i> Inbox
+                            </a>
+                            <a href="{% url 'account_settings' %}" class="dropdown-item">
+                                <i class="fas fa-cog me-2"></i> Account Settings
+                            </a>
+                             <a href="{% url 'logout_view' %}" class="dropdown-item">
+                                <i class="fas fa-power-off me-2"></i> Log Out
+                            </a>
+
+                              {% if user.is_staff %}
+        <div class="dropdown-divider"></div>
+        <a href="{% url 'admin_dashboard' %}" class="dropdown-item text-danger">
+            <i class="fas fa-user-shield me-2"></i> Admin Panel
+        </a>
+        {% endif %}
+
+                        </div>
+                    </div>
+{% endif %}
+            </ul>
+
+            <!-- ===== MOBILE SOCIAL ICONS ===== -->
+            <div class="d-lg-none mt-3 social-icons text-center">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== PAGE CONTENT ===== -->
+{% block content %}
+
+{% endblock %}
+
+{% include 'footer.html' %}
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

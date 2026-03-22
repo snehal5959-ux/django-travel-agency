@@ -1,0 +1,81 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .place-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.place-img {
+    height: 220px;
+    object-fit: cover;
+}
+</style>
+
+<div class="container py-5">
+
+    <h2 class="text-center mb-5 fw-bold">
+        Places in {{ country.name }}
+    </h2>
+
+    {% if places %}
+    <div class="row g-4">
+
+        {% for place in places %}
+        <div class="col-12">
+            <div class="card shadow-sm border-0 place-card">
+                <div class="row g-0 align-items-center">
+
+                    <!-- Image -->
+                    <div class="col-md-4">
+                        <img src="{{ place.image.url }}"
+                             class="img-fluid rounded-start place-img"
+                             alt="{{ place.name }}">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title fw-semibold">
+                                {{ place.name }}
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                {{ place.description }}
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+        <p class="text-center text-muted">No places found.</p>
+    {% endif %}
+
+</div>
+
+<div class="d-flex justify-content-end mt-4">
+    <a href="#"
+       class="btn btn-primary px-4">
+        Plan with Expert
+    </a>
+</div>
+{% endblock %}
+
+
+

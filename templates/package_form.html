@@ -1,0 +1,16 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<h3 class="mb-4">{{ title }}</h3>
+
+<form method="POST" enctype="multipart/form-data" class="card p-4 shadow">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-success">Save Package</button>
+        <a href="{% url 'admin_package_list' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+{% endblock %}

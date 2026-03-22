@@ -1,0 +1,17 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<h3 class="text-danger">Delete Package</h3>
+
+<p>
+    Are you sure you want to delete  
+    <strong>{{ package.name }}</strong>?
+</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a href="{% url 'admin_package_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}

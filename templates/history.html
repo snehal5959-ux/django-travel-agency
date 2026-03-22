@@ -1,0 +1,168 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    /* Page container */
+    .history-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 25px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Heading */
+    .history-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0b3c6d;
+        margin-bottom: 25px;
+        border-bottom: 3px solid #0b3c6d;
+        padding-bottom: 10px;
+    }
+
+    /* Table styling */
+    .history-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .history-table thead {
+        background-color: #0b3c6d;
+        color: #ffffff;
+    }
+
+    .history-table th,
+    .history-table td {
+        padding: 12px 14px;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .history-table tbody tr:hover {
+        background-color: #f4f8fc;
+    }
+
+    /* Status badges */
+    .status-badge {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .status-pending {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+    .status-paid {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .status-cancelled {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    /* Cancel button */
+    .btn-cancel {
+        padding: 6px 14px;
+        font-size: 13px;
+        border-radius: 20px;
+        background-color: #dc3545;
+        color: #ffffff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-cancel:hover {
+        background-color: #b52a37;
+        color: #ffffff;
+    }
+
+    /* Empty message */
+    .no-bookings {
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+        margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .history-table th,
+        .history-table td {
+            font-size: 13px;
+            padding: 8px;
+        }
+
+        .history-title {
+            font-size: 22px;
+        }
+    }
+</style>
+
+<div class="history-container">
+    <h2 class="history-title">My Booking History</h2>
+
+    {% if bookings %}
+    <div class="table-responsive">
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Package</th>
+                    <th>Travel Date</th>
+                    <th>Adults</th>
+                    <th>Children</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ booking.package.name }}</td>
+                    <td>{{ booking.datetime|date:"d M Y" }}</td>
+                    <td>{{ booking.num_adults }}</td>
+                    <td>{{ booking.num_children }}</td>
+                    <td>₹{{ booking.total_price }}</td>
+                    <td>
+                        {% if booking.payment_status == 'Pending' %}
+                            <span class="status-badge status-pending">Pending</span>
+                        {% elif booking.payment_status == 'Paid' %}
+                            <span class="status-badge status-paid">Paid</span>
+                        {% else %}
+                            <span class="status-badge status-cancelled">Cancelled</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if booking.payment_status != 'Cancelled' %}
+                        <a href="{% url 'cancel_booking' booking.id %}" class="btn-cancel">
+                            Cancel
+                        </a>
+                        {% else %}
+                        —
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <p class="no-bookings">You have not made any bookings yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

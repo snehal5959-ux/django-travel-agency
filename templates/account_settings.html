@@ -1,0 +1,92 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block title %}Account Settings{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #f4f7fb;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .settings-container {
+        max-width: 700px;
+        margin: 50px auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    }
+
+    h2 {
+        color: #0b2c66;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    form label {
+        font-weight: 600;
+        color: #0b2c66;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px 12px;
+        margin: 6px 0 16px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    input:focus, select:focus {
+        outline: none;
+        border-color: #0b2c66;
+    }
+
+    .save-btn {
+        background-color: #0b2c66;
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .save-btn:hover {
+        background-color: #093063;
+    }
+
+    .message {
+        text-align: center;
+        color: green;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+</style>
+
+<div class="settings-container">
+    <h2>Account Settings</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <h4>User Information</h4>
+        {{ u_form.as_p }}
+
+        <h4>Profile Information</h4>
+        {{ p_form.as_p }}
+
+        <button type="submit" class="save-btn">Save Changes</button>
+    </form>
+</div>
+{% endblock %}

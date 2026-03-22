@@ -1,0 +1,121 @@
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+        }
+
+        /* Top Navigation */
+        .top-bar {
+            background: #0b2c66;
+            color: #fff;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .top-bar nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .top-bar nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Section */
+        .login-section {
+            height: calc(100vh - 70px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login Card */
+        .login-card {
+            background: #ffffff;
+            width: 380px;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            color: #0b2c66;
+            margin-bottom: 8px;
+        }
+
+        .login-card p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Form */
+        .form-group {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0b2c66;
+        }
+
+        /* Button */
+        .login-btn {
+            width: 100%;
+            background: #0b2c66;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #093063;
+        }
+
+        /* Extra Links */
+        .extra-links {
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .extra-links a {
+            color: #0b2c66;
+            text-decoration: none;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+        }
