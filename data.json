@@ -1,1 +1,945 @@
-[{"model": "packages.travelpackage", "pk": 1, "fields": {"name": "kerala", "destination": "Kochi, Munnar, Alleppey (Alappuzha), Kumarakom, Thekkady, Kovalam, Wayanad, Varkala, Thrissur, Athirappilly, Bekal, Idukki", "package_type": "Cultural", "price": "25000.00", "duration": "5 days 4 nights", "rating": "4.3", "description": "A Kerala trip offers a perfect blend of natural beauty, culture, and relaxation. Known as God’s Own Country, Kerala is famous for its serene backwaters, lush green hill stations, and pristine beaches. Visitors can enjoy peaceful houseboat cruises in Alleppey and breathtaking views in Munnar. The state’s rich traditions, vibrant festivals, and Ayurvedic therapies add a unique charm. Delicious South Indian cuisine and warm hospitality make the Kerala trip truly memorable", "available": true, "image": "packages/kerala-main.jpg", "Hault_details": "Houseboat cruise in Alleppey backwaters, tea plantation visits in Munnar, wildlife exploration in Thekkady, cultural experiences in Kochi, beach relaxation at Kovalam", "mode_of_travelling": "Arrival at Kochi by airplane. Kochi to Munnar by private AC cab. Local sightseeing in Munnar by cab. Munnar to Thekkady by AC cab. Thekkady to Alleppey by AC cab for houseboat stay. Alleppey to Kovalam by AC bus or private cab. Local sightseeing by privat", "food_services": "Daily breakfast, traditional Kerala meals, veg & non-veg options, houseboat meals included", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 2, "fields": {"name": "Malicious Manali", "destination": "Hidimba Mandir, Manikaran Gurudvara, Parvati Valley, Shimala Trek", "package_type": "Adventure", "price": "50000.00", "duration": "5 days 6 night", "rating": "4.5", "description": "A Manali trip is a perfect escape into the lap of the Himalayas. Surrounded by snow-capped mountains, lush valleys, and pine forests, Manali offers breathtaking natural beauty. It is a popular destination for adventure activities like paragliding, river rafting, and skiing. The cool climate and peaceful atmosphere make it ideal for relaxation. Local markets, temples, and scenic spots add cultural charm to the journey.", "available": true, "image": "packages/kullumanali.jpg", "Hault_details": "Hidimba Mandir – Explore the ancient wooden temple and serene cedar forests. Manikaran Gurudwara – Visit the sacred Sikh shrine and enjoy hot springs. Parvati Valley Trek – Trek through scenic villages, rivers, and lush trails. Shimla Trek – Adventure tre", "mode_of_travelling": "Arrival at Shimla by airplane or train. Shimla to Manali via private AC cab or Volvo bus. Local sightseeing in Manali including Hidimba Mandir by private cab. Manali to Kasol / Manikaran Gurudwara by AC cab. Parvati Valley trekking on foot with luggage ca", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Himachali meals available, with vegetarian and non-vegetarian options. Packed meals or local cuisine during trekking and Parvati Valley exploration.", "supervisor": "Experienced tour supervisor", "tags": []}}, {"model": "packages.travelpackage", "pk": 3, "fields": {"name": "CharDham", "destination": "Kedarnath, Badrinath, Gangotri, Yamanotri, Haridvar, Prayag", "package_type": "Cultural", "price": "100000.00", "duration": "15 days 16 nights", "rating": "4.9", "description": "A Char Dham trip is a sacred spiritual journey through the majestic Himalayas. It includes visits to Yamunotri, Gangotri, Kedarnath, and Badrinath, which hold great religious significance in Hinduism. Pilgrims experience divine peace along with breathtaking mountain landscapes. The journey combines devotion, adventure, and natural beauty. It is believed that completing the Char Dham Yatra cleanses the soul and brings spiritual fulfillment.", "available": true, "image": "packages/chardham.jpeg", "Hault_details": null, "mode_of_travelling": "Arrival at Haridwar / Dehradun Airport or Railway Station. Haridwar to Rishikesh by private cab for sightseeing. Rishikesh / Haridwar to Kedarnath by helicopter or shared cab + trek. Kedarnath to Badrinath via private cab or bus. Badrinath to Gangotri and", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during trekking or remote temple visits.", "supervisor": "Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 4, "fields": {"name": "Gujarat", "destination": "Statue of Unity, Kachh, surat, Gir wildlife sanctury, beach, Dwarika, Girnar", "package_type": "Family", "price": "40000.00", "duration": "10 days 11 nights", "rating": "4.3", "description": "A Gujarat trip offers a vibrant mix of culture, history, and natural beauty. The state is famous for iconic attractions like the Statue of Unity, Rann of Kutch, and ancient temples. Colorful festivals, traditional handicrafts, and folk music reflect Gujarat’s rich heritage. Visitors can enjoy diverse landscapes ranging from deserts to beaches and wildlife sanctuaries. Delicious Gujarati cuisine and warm hospitality make the journey memorable.", "available": true, "image": "packages/gujarat.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Ahmedabad Airport / Railway Station. Ahmedabad to Statue of Unity by private AC cab or bus. Statue of Unity to Kutch by AC cab or bus with local sightseeing. Kutch to Surat via private cab or train. Surat to Gir Wildlife Sanctuary by AC cab or", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Gujarati meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and trekking excursions.", "supervisor": "Experienced tour supervisor", "tags": []}}, {"model": "packages.travelpackage", "pk": 5, "fields": {"name": "Escape to Maharashtrian Forts", "destination": "Sinhgad, Raigad, Sajjangad, Janjira, Torana", "package_type": "Adventure", "price": "10000.00", "duration": "3 days 4 nights", "rating": "3.9", "description": "A Maharashtrian forts trip takes you through the rich history of the Maratha Empire. These majestic forts, built by Chhatrapati Shivaji Maharaj, stand proudly on hills and cliffs. They offer breathtaking views along with stories of bravery and strategy. Popular forts like Raigad, Sinhagad, and Pratapgad attract history lovers and trekkers alike. The journey combines adventure, heritage, and natural beauty.", "available": true, "image": "packages/fort.avif", "Hault_details": null, "mode_of_travelling": "Arrival at Pune Airport / Railway Station. Pune to Sinhagad by private AC cab for trekking and sightseeing. Sinhagad to Raigad via AC cab or private vehicle with local exploration. Raigad to Sajjangad by private cab. Sajjangad to Janjira by AC cab or bus,", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian meals with vegetarian and non-vegetarian options. Packed meals provided during fort treks and day excursions.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 6, "fields": {"name": "Go Goa", "destination": "Panaji, Local Churches, Museum, Beaches,Temples", "package_type": "Beach", "price": "20000.00", "duration": "4 days 5 nights", "rating": "4.2", "description": "A Goa trip is all about beaches, fun, and relaxation. Famous for its golden sands, lively nightlife, and scenic sunsets, Goa attracts travelers of all ages. Visitors can enjoy water sports, beach shacks, and vibrant local markets. The blend of Portuguese heritage and Indian culture adds unique charm. Delicious seafood and a carefree atmosphere make Goa a perfect holiday destination.", "available": true, "image": "packages/goa-21.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Dabolim Airport (Goa). Panaji city sightseeing by private AC cab or local vehicle. Visits to churches, museums, temples, and beaches using private cab or rented scooter/bike. Local transfers between attractions by cab or self-drive vehicle. Dep", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Goan meals with vegetarian and non-vegetarian options. Meals provided at restaurants during sightseeing excursions.", "supervisor": "Experienced tour supervisor", "tags": []}}, {"model": "packages.travelpackage", "pk": 7, "fields": {"name": "Agra Aura Expedition", "destination": "Fatehpur Sikri, Mathura, Vrindavan, Bharatpur (Keoladeo National Park), Deeg, Sikandra (Akbar’s Tomb), Bateshwar, Chambal Wildlife Sanctuary, Aligarh, Etmadpur", "package_type": "Cultural", "price": "40000.00", "duration": "15 days 16 nights", "rating": "5.0", "description": "An Agra trip is a journey into India’s rich history and architectural brilliance. The city is home to the iconic Taj Mahal, a symbol of love and one of the Seven Wonders of the World. Agra Fort and Fatehpur Sikri showcase magnificent Mughal craftsmanship. Visitors can explore bustling markets and enjoy traditional Mughlai cuisine. The blend of heritage, culture, and history makes Agra a memorable destination.", "available": true, "image": "packages/agra.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Agra / Delhi Airport or Railway Station. Travel from Agra to Fatehpur Sikri by private AC cab or bus. Local sightseeing in Mathura, Vrindavan, and Deeg via private cab or car. Bharatpur and Chambal Wildlife Sanctuary visits by AC cab or jeep sa", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and day trips.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 10, "fields": {"name": "Sacred Trails of Nepal", "destination": "Kathmandu, Pokhara, Bhaktapur, Patan (Lalitpur), Nagarkot, Chitwan National Park, Lumbini, Bandipur, Dhulikhel, Sarangkot, Manakamana, Gosaikunda, Janakpur, Ilam, Mustang ,Mt. Everest Peak", "package_type": "Family", "price": "70000.00", "duration": "17 days 18 nights", "rating": "3.9", "description": "A Nepal trip offers a perfect blend of natural beauty, spirituality, and adventure. Home to the majestic Himalayas, Nepal attracts travelers with breathtaking mountain views and trekking experiences. Ancient temples and monasteries reflect the country’s deep spiritual heritage. Visitors can explore vibrant cities like Kathmandu and enjoy peaceful moments in Pokhara. Warm hospitality and rich culture make Nepal a truly unforgettable destination.", "available": true, "image": "packages/nepal_aQwj3HK.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Kathmandu Airport. Kathmandu to Pokhara by private cab, tourist bus, or flight. Local sightseeing in Kathmandu, Bhaktapur, Patan, and Nagarkot by private cab or local transport. Pokhara to Sarangkot, Dhulikhel, and Bandipur via private cab or A", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Nepali meals with vegetarian and non-vegetarian options. Packed meals provided during trekking, safari, and remote sightseeing excursions.", "supervisor": "Experienced tour supervisor", "tags": []}}, {"model": "packages.travelpackage", "pk": 11, "fields": {"name": "Konkan Coral Trails", "destination": "Alibaug, Murud, Harihareshwar, Shrivardhan, Dapoli, Ratnagiri, Ganpatipule, Guhagar, Chiplun, Kunkeshwar, Tarkarli, Malvan, Sindhudurg Fort, Devgad, Amboli, Sawantwadi", "package_type": "Relaxation", "price": "10000.00", "duration": "6 days 7 nights", "rating": "4.8", "description": "A Konkan trip is a refreshing escape along the scenic western coastline of Maharashtra. Known for its pristine beaches, lush greenery, and peaceful villages, Konkan offers natural beauty at its best. Historic forts, temples, and coconut-lined shores add cultural charm. Visitors can enjoy fresh seafood and traditional Konkani cuisine. The calm atmosphere and coastal landscapes make Konkan a perfect relaxing getaway.", "available": true, "image": "packages/kokan.jpeg", "Hault_details": null, "mode_of_travelling": "Arrival at Mumbai / Pune Airport or Railway Station. Travel to Alibaug by private AC cab or ferry + cab. Alibaug to Murud, Harihareshwar, Shrivardhan, Dapoli, Ratnagiri, Ganpatipule, Guhagar, and Chiplun by private AC cab or bus, with local sightseeing by", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian & coastal cuisine with vegetarian and non-vegetarian options. Packed meals provided during beach excursions, forts, and hill station visits.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 12, "fields": {"name": "Hampi Heritage Odyssey", "destination": "Hampi, Hospet, Tungabhadra Dam, Anegundi, Badami, Pattadakal, Hampi Bazaar, Virupaksha Temple, Hemakuta Hill, Achyutaraya Temple, Matanga Hill, Lotus Mahal, Elephant Stables", "package_type": "Cultural", "price": "20000.00", "duration": "9 days 10 nights", "rating": "5.0", "description": "A Hampi trip is a journey through the ruins of a once-flourishing Vijayanagara Empire. Known for its ancient temples, majestic stone structures, and unique boulder-strewn landscapes, Hampi is a UNESCO World Heritage Site. Visitors can explore historic monuments like Virupaksha Temple and Vittala Temple, along with scenic riverside views. The blend of history, architecture, and natural beauty makes Hampi a fascinating destination for travelers.", "available": true, "image": "packages/hampi.png", "Hault_details": null, "mode_of_travelling": "Arrival at Hubli / Bangalore Airport or Hospet Railway Station. Hospet to Hampi by private AC cab or local vehicle. Local sightseeing in Hampi, Virupaksha Temple, Hampi Bazaar, Hemakuta Hill, Achyutaraya Temple, Matanga Hill, Lotus Mahal, and Elephant Sta", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Karnataka meals with vegetarian and non-vegetarian options. Packed meals provided during day trips to heritage sites and temples.", "supervisor": "Experienced tour supervisor", "tags": []}}, {"model": "packages.travelpackage", "pk": 13, "fields": {"name": "Mysore Majesty Odyssey", "destination": "Mysore Palace, Chamundi Hill, Brindavan Gardens, Ranganathittu Bird Sanctuary, Srirangapatna, KRS Dam, St. Philomena’s Church, Jaganmohan Palace & Art Gallery, Mysore Zoo, Somnathpur Temple, Nanjangud, Talakad, Bandipur National Park", "package_type": "City", "price": "20000.00", "duration": "15 days 16 nights", "rating": "4.2", "description": "A Mysuru (Mysore) trip offers a delightful blend of history, culture, and royal heritage. Famous for the magnificent Mysore Palace, the city showcases stunning architecture and regal charm. Visitors can explore colorful markets, historic temples, and the grand Dasara festival. Beautiful gardens, such as Brindavan Gardens, add to the city’s scenic appeal. Mysuru’s rich culture, warm hospitality, and serene atmosphere make it a memorable destination.", "available": true, "image": "packages/mysur.png", "Hault_details": null, "mode_of_travelling": "Arrival at Mysore / Bangalore Airport or Railway Station. Local sightseeing in Mysore city including Mysore Palace, Chamundi Hill, Brindavan Gardens, St. Philomena’s Church, Jaganmohan Palace & Art Gallery, and Mysore Zoo by private AC cab. Day trips to R", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Karnataka meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and day trips to heritage sites", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 14, "fields": {"name": "Ooty Breeze Retreat", "destination": "Ooty Lake, Doddabetta Peak, Botanical Gardens, Rose Garden, Nilgiri Mountain Railway, Coonoor, Avalanche Lake, Pykara Lake & Falls, Emerald and Needle Rock Viewpoints, Mudumalai Wildlife Sanctuary, Kotagiri, Lovedale, Tea Plantations", "package_type": "Relaxation", "price": "50000.00", "duration": "15 days 16 nights", "rating": "3.9", "description": "An Ooty trip is a serene escape into the scenic Nilgiri Hills of Tamil Nadu. Known as the “Queen of Hills,” Ooty is famous for its tea gardens, lush greenery, and pleasant climate. Visitors can enjoy boat rides on Ooty Lake, stroll through botanical gardens, and take scenic train rides on the Nilgiri Mountain Railway. The misty hills, rolling landscapes, and peaceful atmosphere make Ooty a perfect hill station getaway.", "available": true, "image": "packages/ooty.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Coimbatore Airport / Railway Station. Coimbatore to Ooty by private AC cab or bus. Local sightseeing in Ooty, Doddabetta Peak, Botanical Gardens, Rose Garden, Ooty Lake, Nilgiri Mountain Railway, and Lovedale by private cab or toy train. Day tr", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional South Indian meals with vegetarian and non-vegetarian options. Packed meals provided during sightseeing and wildlife safaris.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 15, "fields": {"name": "Odisha Explorer’s Trail", "destination": "Bhubaneswar, Puri, Konark, Chilika Lake, Similipal National Park, Cuttack, Raghurajpur, Dhauli, Lingaraj Temple, Jagannath Temple, Chandrabhaga Beach, Hirakud Dam, Mukteshwar Temple, Satkosia Tiger Reserve, Daringbadi", "package_type": "Cultural", "price": "55000.00", "duration": "10 days 11 nights", "rating": "4.7", "description": "An Odisha trip offers a rich blend of culture, history, and natural beauty. The state is famous for its ancient temples, including the renowned Jagannath Temple in Puri and the Sun Temple in Konark. Visitors can explore serene beaches, scenic hills, and wildlife sanctuaries. Odisha’s vibrant festivals, traditional arts, and handicrafts reflect its deep cultural heritage. Delicious cuisine and warm hospitality make the journey truly memorable.", "available": true, "image": "packages/odisa.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Bhubaneswar Airport / Railway Station. Local sightseeing in Bhubaneswar, Lingaraj Temple, Mukteshwar Temple, and Dhauli by private AC cab. Puri and Konark visits via AC cab or bus. Chilika Lake, Chandrabhaga Beach, and Raghurajpur explored by p", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Odia meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and day trips to remote heritage sites.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 16, "fields": {"name": "Ram Lalla Voyage", "destination": "Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, Saryu River Ghats, Treta Ke Thakur, Guptar Ghat, Nageshwarnath Temple, Bharat Kund, Sugriv Parvat, Mani Parbat, Moti Mahal, Ram Katha Park, Swarg Dwar, Faizabad, Chaubari", "package_type": "Cultural", "price": "50000.00", "duration": "10 days 11 nights", "rating": "5.0", "description": "An Ayodhya trip is a spiritual journey to one of India’s most sacred cities. Known as the birthplace of Lord Rama, it holds immense religious significance for Hindus. Visitors can explore ancient temples, ghats along the Sarayu River, and historic sites connected to the Ramayana. The city’s serene atmosphere and cultural heritage provide a peaceful and devotional experience. Ayodhya is a perfect destination for those seeking spirituality and history together.", "available": true, "image": "packages/ayodhya.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Ayodhya / Faizabad Airport or Railway Station. Local sightseeing in Ayodhya including Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, Saryu River Ghats, Treta Ke Thakur, Guptar Ghat, Nageshwarnath Temple, Bharat Kund, Sugriv Parvat, Mani Parbat,", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during heritage site visits and local excursions.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 17, "fields": {"name": "Ujjain Pilgrimage Trail", "destination": "For **Ujjain**, here are **6–7 key destinations**:  Mahakaleshwar Temple, Kal Bhairav Temple, Ram Ghat, Harsiddhi Temple, Chintaman Ganesh Temple, Mangalnath Temple, Bade Ganesh Temple", "package_type": "Cultural", "price": "45000.00", "duration": "10 days 11 nights", "rating": "3.9", "description": "A Ujjain trip is a spiritual and cultural journey to one of India’s most sacred cities. Famous for the Mahakaleshwar Jyotirlinga, Ujjain attracts pilgrims from all over the country. The city is known for its historic temples, ghats along the Shipra River, and the grand Kumbh Mela celebrations. Visitors can also explore ancient architecture and vibrant local markets. Ujjain offers a blend of devotion, heritage, and serene spiritual experiences.", "available": true, "image": "packages/ujjain.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Indore Airport / Ujjain Railway Station. Local sightseeing in Ujjain including Mahakaleshwar Temple, Kal Bhairav Temple, Ram Ghat, Harsiddhi Temple, Chintaman Ganesh Temple, Mangalnath Temple, and Bade Ganesh Temple by private AC cab or car. De", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Madhya Pradesh meals with vegetarian and non-vegetarian options. Packed meals provided during temple visits and local sightseeing.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 18, "fields": {"name": "Jammu & Kashmir Explorer", "destination": "Srinagar, Gulmarg, Pahalgam, Jammu, Sonamarg, Vaishno Devi, Dal Lake", "package_type": "Adventure", "price": "35000.00", "duration": "10 days 11 nights", "rating": "4.8", "description": "A Jammu & Kashmir trip is a breathtaking journey through India’s “Paradise on Earth.” Known for its snow-capped mountains, serene valleys, and sparkling lakes, the region offers stunning natural beauty. Visitors can enjoy houseboat stays in Srinagar, trekking in Gulmarg, and sightseeing in Jammu’s historic temples. Rich culture, traditional handicrafts, and delicious cuisine add to the charm. Jammu & Kashmir is perfect for adventure, relaxation, and memorable scenic experiences.", "available": true, "image": "packages/jammu.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Srinagar or Jammu Airport / Railway Station. Srinagar local sightseeing including Dal Lake by private AC cab or shikara. Day trips to Gulmarg, Pahalgam, and Sonamarg by private cab or AC bus. Jammu sightseeing and Vaishno Devi pilgrimage via AC", "food_services": "Daily breakfast included at hotels or houseboats. Traditional Kashmiri and North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during day trips and pilgrimage excursions", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 19, "fields": {"name": "Ashtavinayak Pilgrimage Trail", "destination": "Mayureshwar (Morgaon), Siddhivinayak (Siddhatek), Ballaleshwar (Pali), Varadvinayak (Mahad), Chintamani (Theur), Girijatmaj (Lenyadri), Vighnahar (Ozar)", "package_type": "Cultural", "price": "4000.00", "duration": "3 days 4 night", "rating": "4.6", "description": "An Ashtavinayak trip is a spiritual journey visiting the eight revered Ganesh temples in Maharashtra. Each temple has its unique legend and significance, attracting devotees seeking blessings and prosperity. The pilgrimage takes you through scenic villages, hills, and historic sites, offering both devotion and cultural experiences. It is believed that completing the Ashtavinayak Yatra brings spiritual fulfillment and good fortune. The journey beautifully combines faith, tradition, and exploration.", "available": true, "image": "packages/Ashtavinayak-Darshan.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Pune / Mumbai Airport or Railway Station. Travel to Mayureshwar (Morgaon) by private AC cab. Local sightseeing to Siddhivinayak (Siddhatek), Ballaleshwar (Pali), Varadvinayak (Mahad), Chintamani (Theur), Girijatmaj (Lenyadri), and Vighnahar (Oz", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian meals with vegetarian and non-vegetarian options. Packed meals provided during temple visits and day trips across the Ashtavinayak circuit.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 20, "fields": {"name": "Heritage & Caves Escape in Aurangabad", "destination": "Ajanta Caves, Ellora Caves, Bibi Ka Maqbara, Daulatabad Fort, Panchakki, Aurangabad Caves, Siddharth Garden & Zoo, Grishneshwar Temple, Salim Ali Lake, Pitalkhora Caves, Kaghzipura Ganesh Temple, Jayakwadi Dam", "package_type": "City", "price": "15000.00", "duration": "5 days 4 nights", "rating": "4.8", "description": "An Aurangabad trip is a blend of history, culture, and architectural marvels. The city is famous for the UNESCO World Heritage Sites of Ajanta and Ellora Caves, showcasing ancient rock-cut temples and intricate carvings. Visitors can also explore Bibi Ka Maqbara, Daulatabad Fort, and local markets for handicrafts. Aurangabad offers a mix of heritage, scenic surroundings, and rich cultural experiences, making it a memorable destination for travelers.", "available": true, "image": "packages/aurangabad.jpg", "Hault_details": null, "mode_of_travelling": "Arrival at Aurangabad Airport / Railway Station. Local sightseeing in Aurangabad including Ajanta Caves, Ellora Caves, Bibi Ka Maqbara, Daulatabad Fort, Panchakki, Aurangabad Caves, Siddharth Garden & Zoo, Grishneshwar Temple, and Kaghzipura Ganesh Temple", "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian and North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during day trips and heritage site visits.", "supervisor": "Experienced Tour Manager & Local Guide", "tags": []}}, {"model": "packages.travelpackage", "pk": 21, "fields": {"name": "Rajasthani Royals Voyage", "destination": "Jaipur, Udaipur, Jodhpur, Jaisalmer, Pushkar, Bikaner, Mount Abu, Ranthambore, Chittorgarh, Ajmer, Mandawa, Alwar, Kota, Bundi, Sawai Madhopur, Barmer, Neemrana, Bhilwara", "package_type": "Cultural", "price": "45000.00", "duration": "8 days 7 nights", "rating": "4.3", "description": "A Rajasthan trip is a vibrant journey through India’s royal heritage and desert landscapes. Known as the Land of Kings, it is famous for majestic forts, grand palaces, and colorful cities like Jaipur, Udaipur, Jaisalmer, and Jodhpur. Visitors can experience desert safaris, folk music, traditional cuisine, and bustling markets. The state’s rich culture, historic architecture, and warm hospitality make Rajasthan a captivating and unforgettable destination.", "available": true, "image": "packages/raj.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 22, "fields": {"name": "Mahabaleshwar Horizons Tour", "destination": "Venna Lake, Arthur’s Seat, Pratapgad Fort, Mapro Garden, Lingmala Waterfall, Wilson Point, Kate’s Point, Elephant’s Head Point, Bombay Point, Lingmala Viewpoint, Panchgani (nearby), Connaught Peak, Table Land", "package_type": "Relaxation", "price": "10000.00", "duration": "4 days 3 nights", "rating": "4.1", "description": "A Mahabaleshwar trip is a refreshing escape to the scenic Western Ghats of Maharashtra. Known for its lush green hills, strawberry farms, and pleasant climate, it is a popular hill station. Visitors can enjoy panoramic viewpoints, boat rides on Venna Lake, and trekking through nature trails. The serene atmosphere, misty landscapes, and local produce make Mahabaleshwar a perfect destination for relaxation and nature lovers.", "available": true, "image": "packages/MAHABALESHWAR.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 27, "fields": {"name": "Agumbe", "destination": "Agumbe, Kundadri Hills, Barkana Falls, Onake Abbi Falls, Sunset View Point", "package_type": "Cultural", "price": "15000.00", "duration": "3 days 2 nights", "rating": "4.5", "description": "Agumbe, often called the “Cherrapunji of South India,” is a hidden rainforest village located in the Western Ghats of Karnataka. Famous for its heavy rainfall, misty hills, and rich biodiversity, Agumbe is a paradise for nature lovers and wildlife enthusiasts. The destination is known for breathtaking sunsets, dense tropical forests, and stunning waterfalls like Barkana Falls and Onake Abbi Falls. Agumbe is also renowned for its role in king cobra conservation and offers a peaceful retreat away from crowded tourist spots, making it ideal for eco-tourism and nature exploration.", "available": true, "image": "packages/agumbe_KL2prud.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 28, "fields": {"name": "Lepakshi", "destination": "Lepakshi Temple, Hanging Pillar, Veerabhadra Temple, Nandi Statue, Lepakshi Fort Area", "package_type": "Cultural", "price": "10000.00", "duration": "5 days 6 night", "rating": "4.7", "description": "Lepakshi is a historic village in Andhra Pradesh renowned for its rich architectural heritage and spiritual significance. The town is home to the famous Veerabhadra Temple, known for its exquisite Vijayanagara-style architecture, intricate murals, and the iconic hanging pillar. Lepakshi also features one of the largest monolithic Nandi statues in India. This destination offers a unique blend of history, art, mythology, and devotion, making it an ideal cultural and heritage tourism location.", "available": true, "image": "packages/lepakshi.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 29, "fields": {"name": "Kutch White Desert", "destination": "Rann of Kutch (White Desert)  Bhuj City  Mandvi Beach  Kutch Handicraft Villages (like Nirona, Hodka)  Local Craft Workshops (embroidery, pottery, block printing)", "package_type": "Family", "price": "15000.00", "duration": "10 days 11 nights", "rating": "3.9", "description": "Kutch in Gujarat is famous for its stunning white desert landscapes and rich artisanal traditions. Beyond the Rann Festival, travelers can explore vibrant villages where handicrafts like embroidery, leatherwork, pottery, and block printing are still practiced. The region combines natural beauty with cultural heritage, offering an immersive experience of desert life, crafts, and local traditions. Ideal for those who want to explore art, culture, rural experiences, and scenic landscapes.", "available": true, "image": "packages/Rann-utsav-2.webp", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 30, "fields": {"name": "Mizoram", "destination": "Bara Bazar (local market)  Durtlang Hills (panoramic views of Aizawl)  Solomon’s Temple  Reiek Heritage Village (Mizo cultural experience)  Mizoram State Museum", "package_type": "Cultural", "price": "15000.00", "duration": "10 days 11 nights", "rating": "4.2", "description": "Aizawl, the picturesque hill capital of Mizoram, offers a perfect blend of culture, tradition, and natural beauty. Visitors can explore local markets, heritage villages, and cultural landmarks while enjoying the serene hill landscapes. The city is a hub of Mizo art, architecture, cuisine, and music, making it an ideal destination for cultural enthusiasts and those seeking a peaceful hill-town experience.", "available": true, "image": "packages/mizoram.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 31, "fields": {"name": "Gokarna and Murudeshwar", "destination": "Murudeshwar Beach (golden sands & calm waves)  123-feet Tall Shiva Statue (iconic landmark)  Murudeshwar Temple Om Beach (serene om-shaped shoreline)  Paradise Beach (secluded, pristine)  Kudle Beach", "package_type": "Cultural", "price": "5000.00", "duration": "6 days 7 nights", "rating": "4.8", "description": "This combined coastal trip explores Gokarna’s tranquil beaches and laid-back vibe along with Murudeshwar’s spiritual landmarks and scenic coastline. Gokarna offers relaxation, trekking, and beach experiences, while Murudeshwar is famous for its majestic Shiva statue, seaside temple, and panoramic Arabian Sea views. Together, they provide the perfect mix of beach leisure, adventure, and spiritual tourism along Karnataka’s stunning coast.", "available": true, "image": "packages/gokarn.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 32, "fields": {"name": "Coorg, Karnataka", "destination": "Coffee Plantations (lush estates and plantation tours)  Abbey Falls (picturesque waterfall surrounded by greenery)  Raja’s Seat (sunset viewpoint)  Talacauvery (birthplace of river Cauvery)  Dubare Elephant Camp (elephant interaction & river activities)", "package_type": "Adventure", "price": "10000.00", "duration": "5 days 4 nights", "rating": "3.9", "description": "Coorg, also known as the “Scotland of India”, is a hill station in Karnataka famed for its coffee plantations, lush green landscapes, and scenic waterfalls. Visitors can enjoy plantation walks, nature treks, waterfall visits, and river activities, making it an ideal destination for nature lovers, adventure enthusiasts, and photography aficionados. The region also offers a rich cultural experience, with local cuisine and traditional Coorgi hospitality", "available": true, "image": "packages/coorg-karnataka.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 33, "fields": {"name": "Gangtok, Sikkim", "destination": "Rumtek Monastery (largest monastery in Sikkim, Buddhist heritage)  Tsomgo Lake (glacial lake with stunning views)  MG Marg (shopping & local cuisine hub)  Banjhakri Falls (nature & waterfall trek)  Local Trekking Trails", "package_type": "Adventure", "price": "20000.00", "duration": "5 days 6 night", "rating": "4.8", "description": "Gangtok, the capital of Sikkim, is a perfect blend of Himalayan culture, scenic beauty, and adventure activities. Travelers can explore ancient monasteries, glacial lakes, waterfalls, and trekking routes, while enjoying the local cuisine and handicrafts along MG Marg. Gangtok provides a unique mix of spiritual experiences, nature exploration, and hill-station relaxation, making it ideal for cultural enthusiasts and adventure seekers alike.", "available": true, "image": "packages/gangtok.webp", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 34, "fields": {"name": "Uttarakhanda", "destination": "Rishikesh – Shivpuri – Kaudiyala", "package_type": "Adventure", "price": "20000.00", "duration": "10 days 11 nights", "rating": "5.0", "description": "This adventure circuit along the River Ganga combines the spiritual charm of Rishikesh, the camping and adventure experiences of Shivpuri, and the extreme rafting thrills of Kaudiyala. The journey offers white-water rafting, cliff jumping, river camping, and peaceful moments with yoga and Ganga Aarti. It is an ideal destination for travelers seeking a perfect balance of adrenaline, nature, and spirituality.", "available": true, "image": "packages/rishikesh.webp", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.travelpackage", "pk": 35, "fields": {"name": "Wildlife & Jungle Adventures", "destination": "Tadoba Andhari Tiger Reserve (Maharashtra) – thrilling jungle safaris and tiger sightings  Bhimashankar Wildlife Sanctuary (Maharashtra) , Sanjay Gandhi National Park (Mumbai)", "package_type": "Adventure", "price": "10000.00", "duration": "5 days 6 nights", "rating": "3.9", "description": "This Wildlife & Jungle Adventure circuit offers a perfect blend of safari experiences, forest trekking, and nature exploration. From spotting tigers in Tadoba Andhari Tiger Reserve, trekking through the lush forests of Bhimashankar, to exploring the rare urban wilderness of Sanjay Gandhi National Park, this journey is ideal for wildlife lovers, trekkers, and nature enthusiasts seeking adventure close to nature.", "available": true, "image": "packages/wild.jpg", "Hault_details": null, "mode_of_travelling": null, "food_services": null, "supervisor": null, "tags": []}}, {"model": "packages.booking", "pk": 247, "fields": {"user": 15, "name": "Snehal Gavali", "email": "snehalgavali5959@gmail.com", "address": "kurduwadi", "gender": "Female", "datetime": "2026-03-24T00:00:00Z", "num_adults": 1, "num_children": 0, "payment_method": "Online", "package": 3, "payment_status": "Pending", "booking_status": "Pending", "total_price": "100000.00", "created_at": "2026-03-24T10:13:33.748Z", "cancel_reason": null, "cancelled_at": null, "refund_status": "Not Applicable", "refund_requested": false, "refund_requested_at": null, "razorpay_order_id": null, "transaction_id": null, "payment_screenshot": "", "razorpay_signature": null}}, {"model": "packages.booking", "pk": 248, "fields": {"user": 15, "name": "Snehal Gavali", "email": "snehalgavali5959@gmail.com", "address": "kurduwadi", "gender": "Female", "datetime": "2026-03-24T00:00:00Z", "num_adults": 1, "num_children": 0, "payment_method": "Online", "package": 3, "payment_status": "Pending", "booking_status": "Pending", "total_price": "100000.00", "created_at": "2026-03-24T10:13:34.489Z", "cancel_reason": null, "cancelled_at": null, "refund_status": "Not Applicable", "refund_requested": false, "refund_requested_at": null, "razorpay_order_id": null, "transaction_id": null, "payment_screenshot": "", "razorpay_signature": null}}, {"model": "packages.inboxmessage", "pk": 1, "fields": {"user": 6, "subject": "reply for your question", "message": "pandharpur, near the ST stand", "sent_by_admin": true, "created_at": "2026-01-27T17:24:58.912Z", "is_read": true}}, {"model": "packages.inboxmessage", "pk": 2, "fields": {"user": 6, "subject": "place", "message": "Hello Rajeshwari!! Our actual office is near Tulsi Vrundavan pandharpur", "sent_by_admin": true, "created_at": "2026-03-07T04:23:01.441Z", "is_read": true}}, {"model": "packages.inboxmessage", "pk": 3, "fields": {"user": 6, "subject": "place", "message": "can i book for foreign?", "sent_by_admin": true, "created_at": "2026-03-07T04:58:40.783Z", "is_read": false}}, {"model": "packages.inboxmessage", "pk": 4, "fields": {"user": 6, "subject": "place", "message": "can i book for foreign?", "sent_by_admin": true, "created_at": "2026-03-07T04:58:55.480Z", "is_read": false}}, {"model": "packages.inboxmessage", "pk": 5, "fields": {"user": 6, "subject": "place", "message": "come at pandharpur", "sent_by_admin": true, "created_at": "2026-03-07T04:59:16.566Z", "is_read": false}}, {"model": "packages.contactmessage", "pk": 1, "fields": {"user": null, "name": "Rajeshwari", "email": "rajeshwarigangonda19@gmail.com", "screenshot": "", "message": "what is the exact location of your office", "created_at": "2026-01-27T17:08:38.521Z"}}, {"model": "packages.userprofile", "pk": 13, "fields": {"user": 15, "phone": "7219572296", "gender": "", "company": ""}}, {"model": "packages.blog", "pk": 1, "fields": {"title": "Top 10 must visited places in India", "slug": "indias-top-10-visited-places", "image": "blogs/blog4.jpg", "short_desc": "India is a land of diverse beauty, rich heritage, and unforgettable experiences. From historical monuments and spiritual cities to beaches and hill stations, these top 10 most visited places in India attract millions of travelers every year.", "full_content": "Agra – Home to the iconic Taj Mahal, Agra symbolizes eternal love and Mughal architecture.\r\nDelhi – India’s capital blends ancient history with modern lifestyle and monuments.\r\nJaipur – The Pink City is famous for royal palaces, forts, and colorful bazaars.\r\nGoa – India’s beach capital known for nightlife, water sports, and scenic beaches.\r\nMumbai – The city of dreams offers Bollywood glamour, sea views, and vibrant life.\r\nVaranasi – One of the oldest cities in the world, famous for spirituality and ghats.\r\nManali – A popular hill station known for snow, adventure sports, and honeymoon trips.\r\nUdaipur – The City of Lakes, famous for romance, palaces, and heritage hotels.\r\nRishikesh – Yoga capital of the world with spiritual vibes and adventure activities.\r\nKolkata – Cultural capital of India with colonial architecture and artistic heritage.", "date": "2025-12-30"}}, {"model": "packages.feedback", "pk": 1, "fields": {"user": 7, "package": 6, "name": "rajeshwarigangonda19@gmail.com", "message": "good", "rating": 4, "created_at": "2025-12-31T18:13:54.400Z"}}, {"model": "packages.feedback", "pk": 2, "fields": {"user": 1, "package": 1, "name": "Aishwarya Kulkarni", "message": "go", "rating": 5, "created_at": "2025-12-31T18:21:39.548Z"}}, {"model": "packages.feedback", "pk": 3, "fields": {"user": 3, "package": null, "name": "Aishwarya Kulkarni", "message": "good", "rating": 5, "created_at": "2026-01-10T17:35:03.826Z"}}, {"model": "packages.country", "pk": 6, "fields": {"name": "New York", "cover_image": "countries/destination-9.jpg", "place1_name": "Statue of Liberty", "place1_image": "places/place1.avif", "place1_description": "The Statue of Liberty is a famous symbol of freedom located on Liberty Island in New York Harbor. It was a gift from France to the United States in 1886 to celebrate American independence. Designed by Frédéric Auguste Bartholdi, its internal structure was built by Gustave Eiffel.", "place2_name": "Central Park", "place2_image": "places/place2.jpg", "place2_description": "Central Park is a large public park located in the center of Manhattan, New York City. It was opened in 1858 and designed by Frederick Law Olmsted and Calvert Vaux.\r\n\r\nThe park covers about 843 acres and includes walking paths, lakes, gardens, playgrounds, and open spaces. It is a popular place for relaxation, sports, and tourism, and is one of the most visited parks in the world.", "place3_name": "Brooklyn Bridge", "place3_image": "places/place3.webp", "place3_description": "The Brooklyn Bridge is a historic suspension bridge in New York City that connects Manhattan and Brooklyn across the East River. It was completed in 1883 and was one of the first steel-wire suspension bridges in the world.\r\n\r\nDesigned by John A. Roebling, it is about 1,595 feet (486 meters) long and is a popular landmark for walking, cycling, and enjoying city views.", "place4_name": "Fifth Avenue", "place4_image": "places/place4.jpg", "place4_description": "Fifth Avenue is a famous street in Manhattan, New York City. It is known for luxury shopping, high-end brands, and popular landmarks.\r\n\r\nThe avenue also passes by attractions like the Empire State Building, Rockefeller Center, and Central Park. It is one of the most well-known and expensive shopping streets in the world."}}, {"model": "packages.country", "pk": 7, "fields": {"name": "Japan", "cover_image": "countries/jp.jpg", "place1_name": "Mount Fuji (Fujisan)", "place1_image": "places/jplace1.webp", "place1_description": "Mount Fuji is the highest mountain in Japan, standing at 3,776 meters (12,389 feet). It is an active volcano located on Honshu Island, about 100 km from Tokyo.\r\n\r\nMount Fuji is a symbol of Japan and is famous for its nearly perfect cone shape. It is a popular destination for climbing, sightseeing, and photography. In 2013, it was recognized as a UNESCO World Heritage Site.", "place2_name": "Tokyo Tower", "place2_image": "places/jplace2.avif", "place2_description": "Tokyo Tower is a famous landmark located in Tokyo, Japan. It was completed in 1958 and is inspired by the Eiffel Tower in France.\r\n\r\nThe tower stands 333 meters tall and is used for broadcasting and tourism. Visitors can go to the observation decks to enjoy beautiful views of Tokyo city. It is painted red and white for air safety and is one of Tokyo’s most popular attractions.", "place3_name": "Hiroshima Peace Memorial Park", "place3_image": "places/jplace3.avif", "place3_description": "Hiroshima Peace Memorial Park is a memorial park located in Hiroshima, Japan. It was built to honor the victims of the atomic bomb dropped on August 6, 1945.\r\n\r\nThe park includes the Atomic Bomb Dome, Peace Memorial Museum, and the Children’s Peace Monument. It serves as a symbol of peace and a reminder of the importance of a world without nuclear weapons.", "place4_name": "Shibuya Crossing", "place4_image": "places/jplace4.jpg", "place4_description": "Shibuya Crossing is a famous pedestrian crossing located in front of Shibuya Station in Tokyo, Japan. It is known as one of the busiest intersections in the world, where hundreds of people cross at the same time from all directions.\r\n\r\nIt is a popular tourist spot and a symbol of Tokyo’s modern, fast-paced city life."}}, {"model": "packages.country", "pk": 8, "fields": {"name": "Dubai", "cover_image": "countries/ddubai.webp", "place1_name": "Burj Khalifa", "place1_image": "places/dplace1.jpg", "place1_description": "Burj Khalifa is the tallest building in the world, located in Dubai, United Arab Emirates. It was completed in 2010 and stands at 828 meters (2,717 feet) tall.\r\n\r\nThe skyscraper has offices, residences, restaurants, and observation decks that offer amazing views of the city. It is one of the most famous landmarks in the world and a symbol of modern Dubai.", "place2_name": "Palm Jumeirah", "place2_image": "places/dplace2.webp", "place2_description": "Palm Jumeirah is a man-made island in Dubai, United Arab Emirates. It is shaped like a palm tree and was built in the Persian Gulf.\r\n\r\nThe island is home to luxury hotels, apartments, restaurants, and beaches, including the famous Atlantis Hotel. It is one of Dubai’s most popular tourist attractions and a symbol of modern engineering.", "place3_name": "Desert Safari", "place3_image": "places/ddesert.jpg", "place3_description": "Desert Safari is a popular tourist activity in Dubai where visitors explore the desert. It includes exciting activities like dune bashing in 4x4 vehicles, camel riding, sandboarding, and watching sunset views.\r\n\r\nIn the evening, visitors can enjoy traditional Arabic food, cultural shows, and entertainment at a desert camp. It is one of the most famous adventure experiences in Dubai.", "place4_name": "Jumeirah Beach", "place4_image": "places/dplace4.avif", "place4_description": "Jumeirah Beach is a popular public beach in Dubai, United Arab Emirates. It is known for its white sand, clear blue water, and beautiful views of the Burj Al Arab hotel.\r\n\r\nThe beach is a great place for swimming, relaxing, and water sports. It is one of the most visited tourist spots in Dubai."}}, {"model": "packages.country", "pk": 9, "fields": {"name": "singapore", "cover_image": "countries/ssing.jpg", "place1_name": "Marina Bay Sands", "place1_image": "places/splace1.avif", "place1_description": "Marina Bay Sands is a famous luxury hotel and entertainment complex in Singapore. It opened in 2010 and is known for its unique design of three towers connected by a rooftop SkyPark.\r\n\r\nThe SkyPark features a large infinity pool, gardens, and an observation deck with amazing city views. The complex also includes a shopping mall, casino, museum, restaurants, and theaters. It is one of Singapore’s most iconic landmarks.", "place2_name": "Sentosa Island", "place2_image": "places/splace2.webp", "place2_description": "Sentosa Island is a popular resort island in Singapore known for its beaches, theme parks, and attractions. It is a top tourist destination offering fun activities for families and visitors.\r\n\r\nThe island is home to Universal Studios Singapore, S.E.A. Aquarium, Adventure Cove Waterpark, and beautiful beaches like Siloso Beach. It is a perfect place for relaxation and entertainment.", "place3_name": "Orchard Road", "place3_image": "places/splace3.jpg", "place3_description": "Orchard Road is the main shopping street in Singapore. It is famous for its large shopping malls, luxury brands, restaurants, and entertainment options.\r\n\r\nThe area is a popular destination for both tourists and locals, especially during festivals and holiday seasons when it is beautifully decorated. It is known as the heart of shopping in Singapore", "place4_name": "Singapore Zoo", "place4_image": "places/splace4.jpg", "place4_description": "Singapore Zoo is a famous wildlife park in Singapore, opened in 1973. It is known for its open and natural-style enclosures, where animals live in environments similar to their natural habitats.\r\n\r\nThe zoo is home to over 2,800 animals from around the world, including orangutans, lions, and elephants. It is one of the best zoos in the world and a popular attraction for families and tourists."}}, {"model": "packages.country", "pk": 10, "fields": {"name": "Switzerland", "cover_image": "countries/sswitch.jpg", "place1_name": "Zermatt & Matterhorn", "place1_image": "places/sw1.jpg", "place1_description": "Zermatt is a beautiful mountain village in Switzerland, famous for its stunning views and skiing resorts. It is located at the base of the Matterhorn, one of the most iconic and photographed mountains in the world.\r\n\r\nThe Matterhorn stands about 4,478 meters (14,692 feet) tall and is known for its unique pyramid shape. Zermatt is a popular destination for hiking, skiing, and mountaineering, attracting visitors all year round", "place2_name": "Lake Geneva", "place2_image": "places/sw2.webp", "place2_description": "Lake Geneva is one of the largest lakes in Europe, located between Switzerland and France. It is surrounded by beautiful mountains, vineyards, and charming cities like Geneva, Lausanne, and Montreux.\r\n\r\nThe lake is popular for boat cruises, swimming, and scenic views. It is known for its natural beauty and peaceful atmosphere, making it a major tourist attraction in Switzerland.", "place3_name": "Lucerne", "place3_image": "places/sw3.avif", "place3_description": "Lucerne is a beautiful city in central Switzerland, located on the shores of Lake Lucerne and surrounded by mountains. It is known for its well-preserved medieval architecture and scenic views.\r\n\r\nThe city’s most famous landmark is the Chapel Bridge (Kapellbrücke), a historic wooden bridge. Lucerne is a popular tourist destination for its culture, history, and access to nearby mountains like Mount Pilatus and Mount Rigi.", "place4_name": "Montreux", "place4_image": "places/sw4.webp", "place4_description": "Montreux is a beautiful lakeside town in Switzerland, located on the shores of Lake Geneva. It is famous for its mild climate, scenic mountain views, and charming promenade.\r\n\r\nMontreux is best known for the Montreux Jazz Festival, one of the world’s most famous music festivals. It is a popular destination for tourists who enjoy music, nature, and relaxing lake views."}}, {"model": "news.travelnews", "pk": 1, "fields": {"title": "Global Travel Demand Surges Ahead of 2026", "link": "https://www.travelandleisure.com/global-travel-trends-2025", "content": "Global tourism continues its strong recovery, with international travel numbers nearing pre-pandemic levels. Airlines are expanding routes across Asia and the Middle East, while travelers are opting for longer, experience-based journeys instead of short city breaks. Industry experts predict sustained growth into 2026, driven by digital booking platforms and flexible travel policies", "published_date": "2025-12-28", "image_url": "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?cs=srgb&dl=pexels-freestockpro-3278215.jpg&fm=jpg", "category": "Global Travel Trends", "read_time": 2}}, {"model": "news.travelnews", "pk": 2, "fields": {"title": "India Sees Strong Growth in Domestic Tourism", "link": "https://www.business-standard.com/industry/news/indian-tourism-growth-2025", "content": "India’s domestic tourism sector has recorded a significant rise in bookings, particularly for hill stations, heritage cities, and pilgrimage destinations. Improved infrastructure, new Vande Bharat routes, and government tourism campaigns have contributed to the surge. Travel agencies report higher demand for curated cultural and eco-friendly tour packages.", "published_date": "2025-12-26", "image_url": "https://indiator.com/tourist-places/wp-content/uploads/2019/01/When-Where-to-Go-in-India-2019.png", "category": "India Travel News", "read_time": 15}}, {"model": "news.travelnews", "pk": 3, "fields": {"title": "Winter Weather Disrupts International Flights", "link": "https://www.aljazeera.com/news/winter-storm-flight-disruptions", "content": "Severe winter storms across North America and Europe have caused widespread flight delays and cancellations during the holiday travel season. Airlines have advised passengers to monitor flight status and allow extra time for connections. Travel insurance claims related to weather disruptions have also increased sharply.", "published_date": "2025-12-27", "image_url": "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg", "category": "Aviation and alert", "read_time": 20}}, {"model": "news.travelnews", "pk": 4, "fields": {"title": "Sustainable Travel Becomes a Top Priority for Tourists", "link": "https://www.ndtv.com/travel/sustainable-tourism-trends-2025", "content": "A growing number of travelers are choosing eco-friendly accommodations, low-carbon transport options, and community-based tourism experiences. Surveys show that sustainability now influences destination choice, especially among younger travelers. Tourism boards worldwide are promoting responsible travel initiatives.", "published_date": "2025-12-24", "image_url": "https://sb.ecobnb.net/app/uploads/sites/3/2022/03/Progetto-senza-titolo.jpg", "category": "Sustainable Travel", "read_time": 20}}, {"model": "news.travelnews", "pk": 5, "fields": {"title": "Southeast Asia Emerges as Most Booked International Region", "link": "https://timesofindia.indiatimes.com/travel/international-travel-trends-2025", "content": "Thailand, Vietnam, and Indonesia have emerged as the most booked international destinations for Indian travelers in late 2025. Affordable packages, visa-friendly policies, and rich cultural experiences have driven demand. Travel platforms report a sharp rise in first-time international travelers.", "published_date": "2025-12-25", "image_url": "https://blog.dookinternational.com/images/post-media/rTcIY1721810319.jpg", "category": "International destination", "read_time": 10}}, {"model": "home.gallery", "pk": 1, "fields": {"title": "Company", "image": "gallery/company.jpg", "description": "", "created_at": "2026-03-06T17:27:41.227Z"}}]
+[
+{
+  "model": "packages.travelpackage",
+  "pk": 1,
+  "fields": {
+    "name": "kerala",
+    "destination": "Kochi, Munnar, Alleppey (Alappuzha), Kumarakom, Thekkady, Kovalam, Wayanad, Varkala, Thrissur, Athirappilly, Bekal, Idukki",
+    "package_type": "Cultural",
+    "price": "25000.00",
+    "duration": "5 days 4 nights",
+    "rating": "4.3",
+    "description": "A Kerala trip offers a perfect blend of natural beauty, culture, and relaxation. Known as Godï¿½s Own Country, Kerala is famous for its serene backwaters, lush green hill stations, and pristine beaches. Visitors can enjoy peaceful houseboat cruises in Alleppey and breathtaking views in Munnar. The stateï¿½s rich traditions, vibrant festivals, and Ayurvedic therapies add a unique charm. Delicious South Indian cuisine and warm hospitality make the Kerala trip truly memorable",
+    "available": true,
+    "image": "packages/kerala-main.jpg",
+    "Hault_details": "Houseboat cruise in Alleppey backwaters, tea plantation visits in Munnar, wildlife exploration in Thekkady, cultural experiences in Kochi, beach relaxation at Kovalam",
+    "mode_of_travelling": "Arrival at Kochi by airplane. Kochi to Munnar by private AC cab. Local sightseeing in Munnar by cab. Munnar to Thekkady by AC cab. Thekkady to Alleppey by AC cab for houseboat stay. Alleppey to Kovalam by AC bus or private cab. Local sightseeing by privat",
+    "food_services": "Daily breakfast, traditional Kerala meals, veg & non-veg options, houseboat meals included",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 2,
+  "fields": {
+    "name": "Malicious Manali",
+    "destination": "Hidimba Mandir, Manikaran Gurudvara, Parvati Valley, Shimala Trek",
+    "package_type": "Adventure",
+    "price": "50000.00",
+    "duration": "5 days 6 night",
+    "rating": "4.5",
+    "description": "A Manali trip is a perfect escape into the lap of the Himalayas. Surrounded by snow-capped mountains, lush valleys, and pine forests, Manali offers breathtaking natural beauty. It is a popular destination for adventure activities like paragliding, river rafting, and skiing. The cool climate and peaceful atmosphere make it ideal for relaxation. Local markets, temples, and scenic spots add cultural charm to the journey.",
+    "available": true,
+    "image": "packages/kullumanali.jpg",
+    "Hault_details": "Hidimba Mandir ï¿½ Explore the ancient wooden temple and serene cedar forests. Manikaran Gurudwara ï¿½ Visit the sacred Sikh shrine and enjoy hot springs. Parvati Valley Trek ï¿½ Trek through scenic villages, rivers, and lush trails. Shimla Trek ï¿½ Adventure tre",
+    "mode_of_travelling": "Arrival at Shimla by airplane or train. Shimla to Manali via private AC cab or Volvo bus. Local sightseeing in Manali including Hidimba Mandir by private cab. Manali to Kasol / Manikaran Gurudwara by AC cab. Parvati Valley trekking on foot with luggage ca",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Himachali meals available, with vegetarian and non-vegetarian options. Packed meals or local cuisine during trekking and Parvati Valley exploration.",
+    "supervisor": "Experienced tour supervisor",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 3,
+  "fields": {
+    "name": "CharDham",
+    "destination": "Kedarnath, Badrinath, Gangotri, Yamanotri, Haridvar, Prayag",
+    "package_type": "Cultural",
+    "price": "100000.00",
+    "duration": "15 days 16 nights",
+    "rating": "4.9",
+    "description": "A Char Dham trip is a sacred spiritual journey through the majestic Himalayas. It includes visits to Yamunotri, Gangotri, Kedarnath, and Badrinath, which hold great religious significance in Hinduism. Pilgrims experience divine peace along with breathtaking mountain landscapes. The journey combines devotion, adventure, and natural beauty. It is believed that completing the Char Dham Yatra cleanses the soul and brings spiritual fulfillment.",
+    "available": true,
+    "image": "packages/chardham.jpeg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Haridwar / Dehradun Airport or Railway Station. Haridwar to Rishikesh by private cab for sightseeing. Rishikesh / Haridwar to Kedarnath by helicopter or shared cab + trek. Kedarnath to Badrinath via private cab or bus. Badrinath to Gangotri and",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during trekking or remote temple visits.",
+    "supervisor": "Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 4,
+  "fields": {
+    "name": "Gujarat",
+    "destination": "Statue of Unity, Kachh, surat, Gir wildlife sanctury, beach, Dwarika, Girnar",
+    "package_type": "Family",
+    "price": "40000.00",
+    "duration": "10 days 11 nights",
+    "rating": "4.3",
+    "description": "A Gujarat trip offers a vibrant mix of culture, history, and natural beauty. The state is famous for iconic attractions like the Statue of Unity, Rann of Kutch, and ancient temples. Colorful festivals, traditional handicrafts, and folk music reflect Gujaratï¿½s rich heritage. Visitors can enjoy diverse landscapes ranging from deserts to beaches and wildlife sanctuaries. Delicious Gujarati cuisine and warm hospitality make the journey memorable.",
+    "available": true,
+    "image": "packages/gujarat.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Ahmedabad Airport / Railway Station. Ahmedabad to Statue of Unity by private AC cab or bus. Statue of Unity to Kutch by AC cab or bus with local sightseeing. Kutch to Surat via private cab or train. Surat to Gir Wildlife Sanctuary by AC cab or",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Gujarati meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and trekking excursions.",
+    "supervisor": "Experienced tour supervisor",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 5,
+  "fields": {
+    "name": "Escape to Maharashtrian Forts",
+    "destination": "Sinhgad, Raigad, Sajjangad, Janjira, Torana",
+    "package_type": "Adventure",
+    "price": "10000.00",
+    "duration": "3 days 4 nights",
+    "rating": "3.9",
+    "description": "A Maharashtrian forts trip takes you through the rich history of the Maratha Empire. These majestic forts, built by Chhatrapati Shivaji Maharaj, stand proudly on hills and cliffs. They offer breathtaking views along with stories of bravery and strategy. Popular forts like Raigad, Sinhagad, and Pratapgad attract history lovers and trekkers alike. The journey combines adventure, heritage, and natural beauty.",
+    "available": true,
+    "image": "packages/fort.avif",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Pune Airport / Railway Station. Pune to Sinhagad by private AC cab for trekking and sightseeing. Sinhagad to Raigad via AC cab or private vehicle with local exploration. Raigad to Sajjangad by private cab. Sajjangad to Janjira by AC cab or bus,",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian meals with vegetarian and non-vegetarian options. Packed meals provided during fort treks and day excursions.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 6,
+  "fields": {
+    "name": "Go Goa",
+    "destination": "Panaji, Local Churches, Museum, Beaches,Temples",
+    "package_type": "Beach",
+    "price": "20000.00",
+    "duration": "4 days 5 nights",
+    "rating": "4.2",
+    "description": "A Goa trip is all about beaches, fun, and relaxation. Famous for its golden sands, lively nightlife, and scenic sunsets, Goa attracts travelers of all ages. Visitors can enjoy water sports, beach shacks, and vibrant local markets. The blend of Portuguese heritage and Indian culture adds unique charm. Delicious seafood and a carefree atmosphere make Goa a perfect holiday destination.",
+    "available": true,
+    "image": "packages/goa-21.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Dabolim Airport (Goa). Panaji city sightseeing by private AC cab or local vehicle. Visits to churches, museums, temples, and beaches using private cab or rented scooter/bike. Local transfers between attractions by cab or self-drive vehicle. Dep",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Goan meals with vegetarian and non-vegetarian options. Meals provided at restaurants during sightseeing excursions.",
+    "supervisor": "Experienced tour supervisor",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 7,
+  "fields": {
+    "name": "Agra Aura Expedition",
+    "destination": "Fatehpur Sikri, Mathura, Vrindavan, Bharatpur (Keoladeo National Park), Deeg, Sikandra (Akbarï¿½s Tomb), Bateshwar, Chambal Wildlife Sanctuary, Aligarh, Etmadpur",
+    "package_type": "Cultural",
+    "price": "40000.00",
+    "duration": "15 days 16 nights",
+    "rating": "5.0",
+    "description": "An Agra trip is a journey into Indiaï¿½s rich history and architectural brilliance. The city is home to the iconic Taj Mahal, a symbol of love and one of the Seven Wonders of the World. Agra Fort and Fatehpur Sikri showcase magnificent Mughal craftsmanship. Visitors can explore bustling markets and enjoy traditional Mughlai cuisine. The blend of heritage, culture, and history makes Agra a memorable destination.",
+    "available": true,
+    "image": "packages/agra.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Agra / Delhi Airport or Railway Station. Travel from Agra to Fatehpur Sikri by private AC cab or bus. Local sightseeing in Mathura, Vrindavan, and Deeg via private cab or car. Bharatpur and Chambal Wildlife Sanctuary visits by AC cab or jeep sa",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and day trips.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 10,
+  "fields": {
+    "name": "Sacred Trails of Nepal",
+    "destination": "Kathmandu, Pokhara, Bhaktapur, Patan (Lalitpur), Nagarkot, Chitwan National Park, Lumbini, Bandipur, Dhulikhel, Sarangkot, Manakamana, Gosaikunda, Janakpur, Ilam, Mustang ,Mt. Everest Peak",
+    "package_type": "Family",
+    "price": "70000.00",
+    "duration": "17 days 18 nights",
+    "rating": "3.9",
+    "description": "A Nepal trip offers a perfect blend of natural beauty, spirituality, and adventure. Home to the majestic Himalayas, Nepal attracts travelers with breathtaking mountain views and trekking experiences. Ancient temples and monasteries reflect the countryï¿½s deep spiritual heritage. Visitors can explore vibrant cities like Kathmandu and enjoy peaceful moments in Pokhara. Warm hospitality and rich culture make Nepal a truly unforgettable destination.",
+    "available": true,
+    "image": "packages/nepal_aQwj3HK.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Kathmandu Airport. Kathmandu to Pokhara by private cab, tourist bus, or flight. Local sightseeing in Kathmandu, Bhaktapur, Patan, and Nagarkot by private cab or local transport. Pokhara to Sarangkot, Dhulikhel, and Bandipur via private cab or A",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Nepali meals with vegetarian and non-vegetarian options. Packed meals provided during trekking, safari, and remote sightseeing excursions.",
+    "supervisor": "Experienced tour supervisor",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 11,
+  "fields": {
+    "name": "Konkan Coral Trails",
+    "destination": "Alibaug, Murud, Harihareshwar, Shrivardhan, Dapoli, Ratnagiri, Ganpatipule, Guhagar, Chiplun, Kunkeshwar, Tarkarli, Malvan, Sindhudurg Fort, Devgad, Amboli, Sawantwadi",
+    "package_type": "Relaxation",
+    "price": "10000.00",
+    "duration": "6 days 7 nights",
+    "rating": "4.8",
+    "description": "A Konkan trip is a refreshing escape along the scenic western coastline of Maharashtra. Known for its pristine beaches, lush greenery, and peaceful villages, Konkan offers natural beauty at its best. Historic forts, temples, and coconut-lined shores add cultural charm. Visitors can enjoy fresh seafood and traditional Konkani cuisine. The calm atmosphere and coastal landscapes make Konkan a perfect relaxing getaway.",
+    "available": true,
+    "image": "packages/kokan.jpeg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Mumbai / Pune Airport or Railway Station. Travel to Alibaug by private AC cab or ferry + cab. Alibaug to Murud, Harihareshwar, Shrivardhan, Dapoli, Ratnagiri, Ganpatipule, Guhagar, and Chiplun by private AC cab or bus, with local sightseeing by",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian & coastal cuisine with vegetarian and non-vegetarian options. Packed meals provided during beach excursions, forts, and hill station visits.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 12,
+  "fields": {
+    "name": "Hampi Heritage Odyssey",
+    "destination": "Hampi, Hospet, Tungabhadra Dam, Anegundi, Badami, Pattadakal, Hampi Bazaar, Virupaksha Temple, Hemakuta Hill, Achyutaraya Temple, Matanga Hill, Lotus Mahal, Elephant Stables",
+    "package_type": "Cultural",
+    "price": "20000.00",
+    "duration": "9 days 10 nights",
+    "rating": "5.0",
+    "description": "A Hampi trip is a journey through the ruins of a once-flourishing Vijayanagara Empire. Known for its ancient temples, majestic stone structures, and unique boulder-strewn landscapes, Hampi is a UNESCO World Heritage Site. Visitors can explore historic monuments like Virupaksha Temple and Vittala Temple, along with scenic riverside views. The blend of history, architecture, and natural beauty makes Hampi a fascinating destination for travelers.",
+    "available": true,
+    "image": "packages/hampi.png",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Hubli / Bangalore Airport or Hospet Railway Station. Hospet to Hampi by private AC cab or local vehicle. Local sightseeing in Hampi, Virupaksha Temple, Hampi Bazaar, Hemakuta Hill, Achyutaraya Temple, Matanga Hill, Lotus Mahal, and Elephant Sta",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Karnataka meals with vegetarian and non-vegetarian options. Packed meals provided during day trips to heritage sites and temples.",
+    "supervisor": "Experienced tour supervisor",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 13,
+  "fields": {
+    "name": "Mysore Majesty Odyssey",
+    "destination": "Mysore Palace, Chamundi Hill, Brindavan Gardens, Ranganathittu Bird Sanctuary, Srirangapatna, KRS Dam, St. Philomenaï¿½s Church, Jaganmohan Palace & Art Gallery, Mysore Zoo, Somnathpur Temple, Nanjangud, Talakad, Bandipur National Park",
+    "package_type": "City",
+    "price": "20000.00",
+    "duration": "15 days 16 nights",
+    "rating": "4.2",
+    "description": "A Mysuru (Mysore) trip offers a delightful blend of history, culture, and royal heritage. Famous for the magnificent Mysore Palace, the city showcases stunning architecture and regal charm. Visitors can explore colorful markets, historic temples, and the grand Dasara festival. Beautiful gardens, such as Brindavan Gardens, add to the cityï¿½s scenic appeal. Mysuruï¿½s rich culture, warm hospitality, and serene atmosphere make it a memorable destination.",
+    "available": true,
+    "image": "packages/mysur.png",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Mysore / Bangalore Airport or Railway Station. Local sightseeing in Mysore city including Mysore Palace, Chamundi Hill, Brindavan Gardens, St. Philomenaï¿½s Church, Jaganmohan Palace & Art Gallery, and Mysore Zoo by private AC cab. Day trips to R",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Karnataka meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and day trips to heritage sites",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 14,
+  "fields": {
+    "name": "Ooty Breeze Retreat",
+    "destination": "Ooty Lake, Doddabetta Peak, Botanical Gardens, Rose Garden, Nilgiri Mountain Railway, Coonoor, Avalanche Lake, Pykara Lake & Falls, Emerald and Needle Rock Viewpoints, Mudumalai Wildlife Sanctuary, Kotagiri, Lovedale, Tea Plantations",
+    "package_type": "Relaxation",
+    "price": "50000.00",
+    "duration": "15 days 16 nights",
+    "rating": "3.9",
+    "description": "An Ooty trip is a serene escape into the scenic Nilgiri Hills of Tamil Nadu. Known as the ï¿½Queen of Hills,ï¿½ Ooty is famous for its tea gardens, lush greenery, and pleasant climate. Visitors can enjoy boat rides on Ooty Lake, stroll through botanical gardens, and take scenic train rides on the Nilgiri Mountain Railway. The misty hills, rolling landscapes, and peaceful atmosphere make Ooty a perfect hill station getaway.",
+    "available": true,
+    "image": "packages/ooty.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Coimbatore Airport / Railway Station. Coimbatore to Ooty by private AC cab or bus. Local sightseeing in Ooty, Doddabetta Peak, Botanical Gardens, Rose Garden, Ooty Lake, Nilgiri Mountain Railway, and Lovedale by private cab or toy train. Day tr",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional South Indian meals with vegetarian and non-vegetarian options. Packed meals provided during sightseeing and wildlife safaris.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 15,
+  "fields": {
+    "name": "Odisha Explorerï¿½s Trail",
+    "destination": "Bhubaneswar, Puri, Konark, Chilika Lake, Similipal National Park, Cuttack, Raghurajpur, Dhauli, Lingaraj Temple, Jagannath Temple, Chandrabhaga Beach, Hirakud Dam, Mukteshwar Temple, Satkosia Tiger Reserve, Daringbadi",
+    "package_type": "Cultural",
+    "price": "55000.00",
+    "duration": "10 days 11 nights",
+    "rating": "4.7",
+    "description": "An Odisha trip offers a rich blend of culture, history, and natural beauty. The state is famous for its ancient temples, including the renowned Jagannath Temple in Puri and the Sun Temple in Konark. Visitors can explore serene beaches, scenic hills, and wildlife sanctuaries. Odishaï¿½s vibrant festivals, traditional arts, and handicrafts reflect its deep cultural heritage. Delicious cuisine and warm hospitality make the journey truly memorable.",
+    "available": true,
+    "image": "packages/odisa.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Bhubaneswar Airport / Railway Station. Local sightseeing in Bhubaneswar, Lingaraj Temple, Mukteshwar Temple, and Dhauli by private AC cab. Puri and Konark visits via AC cab or bus. Chilika Lake, Chandrabhaga Beach, and Raghurajpur explored by p",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Odia meals with vegetarian and non-vegetarian options. Packed meals provided during wildlife safaris and day trips to remote heritage sites.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 16,
+  "fields": {
+    "name": "Ram Lalla Voyage",
+    "destination": "Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, Saryu River Ghats, Treta Ke Thakur, Guptar Ghat, Nageshwarnath Temple, Bharat Kund, Sugriv Parvat, Mani Parbat, Moti Mahal, Ram Katha Park, Swarg Dwar, Faizabad, Chaubari",
+    "package_type": "Cultural",
+    "price": "50000.00",
+    "duration": "10 days 11 nights",
+    "rating": "5.0",
+    "description": "An Ayodhya trip is a spiritual journey to one of Indiaï¿½s most sacred cities. Known as the birthplace of Lord Rama, it holds immense religious significance for Hindus. Visitors can explore ancient temples, ghats along the Sarayu River, and historic sites connected to the Ramayana. The cityï¿½s serene atmosphere and cultural heritage provide a peaceful and devotional experience. Ayodhya is a perfect destination for those seeking spirituality and history together.",
+    "available": true,
+    "image": "packages/ayodhya.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Ayodhya / Faizabad Airport or Railway Station. Local sightseeing in Ayodhya including Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, Saryu River Ghats, Treta Ke Thakur, Guptar Ghat, Nageshwarnath Temple, Bharat Kund, Sugriv Parvat, Mani Parbat,",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during heritage site visits and local excursions.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 17,
+  "fields": {
+    "name": "Ujjain Pilgrimage Trail",
+    "destination": "For **Ujjain**, here are **6ï¿½7 key destinations**:  Mahakaleshwar Temple, Kal Bhairav Temple, Ram Ghat, Harsiddhi Temple, Chintaman Ganesh Temple, Mangalnath Temple, Bade Ganesh Temple",
+    "package_type": "Cultural",
+    "price": "45000.00",
+    "duration": "10 days 11 nights",
+    "rating": "3.9",
+    "description": "A Ujjain trip is a spiritual and cultural journey to one of Indiaï¿½s most sacred cities. Famous for the Mahakaleshwar Jyotirlinga, Ujjain attracts pilgrims from all over the country. The city is known for its historic temples, ghats along the Shipra River, and the grand Kumbh Mela celebrations. Visitors can also explore ancient architecture and vibrant local markets. Ujjain offers a blend of devotion, heritage, and serene spiritual experiences.",
+    "available": true,
+    "image": "packages/ujjain.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Indore Airport / Ujjain Railway Station. Local sightseeing in Ujjain including Mahakaleshwar Temple, Kal Bhairav Temple, Ram Ghat, Harsiddhi Temple, Chintaman Ganesh Temple, Mangalnath Temple, and Bade Ganesh Temple by private AC cab or car. De",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Madhya Pradesh meals with vegetarian and non-vegetarian options. Packed meals provided during temple visits and local sightseeing.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 18,
+  "fields": {
+    "name": "Jammu & Kashmir Explorer",
+    "destination": "Srinagar, Gulmarg, Pahalgam, Jammu, Sonamarg, Vaishno Devi, Dal Lake",
+    "package_type": "Adventure",
+    "price": "35000.00",
+    "duration": "10 days 11 nights",
+    "rating": "4.8",
+    "description": "A Jammu & Kashmir trip is a breathtaking journey through Indiaï¿½s ï¿½Paradise on Earth.ï¿½ Known for its snow-capped mountains, serene valleys, and sparkling lakes, the region offers stunning natural beauty. Visitors can enjoy houseboat stays in Srinagar, trekking in Gulmarg, and sightseeing in Jammuï¿½s historic temples. Rich culture, traditional handicrafts, and delicious cuisine add to the charm. Jammu & Kashmir is perfect for adventure, relaxation, and memorable scenic experiences.",
+    "available": true,
+    "image": "packages/jammu.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Srinagar or Jammu Airport / Railway Station. Srinagar local sightseeing including Dal Lake by private AC cab or shikara. Day trips to Gulmarg, Pahalgam, and Sonamarg by private cab or AC bus. Jammu sightseeing and Vaishno Devi pilgrimage via AC",
+    "food_services": "Daily breakfast included at hotels or houseboats. Traditional Kashmiri and North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during day trips and pilgrimage excursions",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 19,
+  "fields": {
+    "name": "Ashtavinayak Pilgrimage Trail",
+    "destination": "Mayureshwar (Morgaon), Siddhivinayak (Siddhatek), Ballaleshwar (Pali), Varadvinayak (Mahad), Chintamani (Theur), Girijatmaj (Lenyadri), Vighnahar (Ozar)",
+    "package_type": "Cultural",
+    "price": "4000.00",
+    "duration": "3 days 4 night",
+    "rating": "4.6",
+    "description": "An Ashtavinayak trip is a spiritual journey visiting the eight revered Ganesh temples in Maharashtra. Each temple has its unique legend and significance, attracting devotees seeking blessings and prosperity. The pilgrimage takes you through scenic villages, hills, and historic sites, offering both devotion and cultural experiences. It is believed that completing the Ashtavinayak Yatra brings spiritual fulfillment and good fortune. The journey beautifully combines faith, tradition, and exploration.",
+    "available": true,
+    "image": "packages/Ashtavinayak-Darshan.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Pune / Mumbai Airport or Railway Station. Travel to Mayureshwar (Morgaon) by private AC cab. Local sightseeing to Siddhivinayak (Siddhatek), Ballaleshwar (Pali), Varadvinayak (Mahad), Chintamani (Theur), Girijatmaj (Lenyadri), and Vighnahar (Oz",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian meals with vegetarian and non-vegetarian options. Packed meals provided during temple visits and day trips across the Ashtavinayak circuit.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 20,
+  "fields": {
+    "name": "Heritage & Caves Escape in Aurangabad",
+    "destination": "Ajanta Caves, Ellora Caves, Bibi Ka Maqbara, Daulatabad Fort, Panchakki, Aurangabad Caves, Siddharth Garden & Zoo, Grishneshwar Temple, Salim Ali Lake, Pitalkhora Caves, Kaghzipura Ganesh Temple, Jayakwadi Dam",
+    "package_type": "City",
+    "price": "15000.00",
+    "duration": "5 days 4 nights",
+    "rating": "4.8",
+    "description": "An Aurangabad trip is a blend of history, culture, and architectural marvels. The city is famous for the UNESCO World Heritage Sites of Ajanta and Ellora Caves, showcasing ancient rock-cut temples and intricate carvings. Visitors can also explore Bibi Ka Maqbara, Daulatabad Fort, and local markets for handicrafts. Aurangabad offers a mix of heritage, scenic surroundings, and rich cultural experiences, making it a memorable destination for travelers.",
+    "available": true,
+    "image": "packages/aurangabad.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": "Arrival at Aurangabad Airport / Railway Station. Local sightseeing in Aurangabad including Ajanta Caves, Ellora Caves, Bibi Ka Maqbara, Daulatabad Fort, Panchakki, Aurangabad Caves, Siddharth Garden & Zoo, Grishneshwar Temple, and Kaghzipura Ganesh Temple",
+    "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Maharashtrian and North Indian meals with vegetarian and non-vegetarian options. Packed meals provided during day trips and heritage site visits.",
+    "supervisor": "Experienced Tour Manager & Local Guide",
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 21,
+  "fields": {
+    "name": "Rajasthani Royals Voyage",
+    "destination": "Jaipur, Udaipur, Jodhpur, Jaisalmer, Pushkar, Bikaner, Mount Abu, Ranthambore, Chittorgarh, Ajmer, Mandawa, Alwar, Kota, Bundi, Sawai Madhopur, Barmer, Neemrana, Bhilwara",
+    "package_type": "Cultural",
+    "price": "45000.00",
+    "duration": "8 days 7 nights",
+    "rating": "4.3",
+    "description": "A Rajasthan trip is a vibrant journey through Indiaï¿½s royal heritage and desert landscapes. Known as the Land of Kings, it is famous for majestic forts, grand palaces, and colorful cities like Jaipur, Udaipur, Jaisalmer, and Jodhpur. Visitors can experience desert safaris, folk music, traditional cuisine, and bustling markets. The stateï¿½s rich culture, historic architecture, and warm hospitality make Rajasthan a captivating and unforgettable destination.",
+    "available": true,
+    "image": "packages/raj.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 22,
+  "fields": {
+    "name": "Mahabaleshwar Horizons Tour",
+    "destination": "Venna Lake, Arthurï¿½s Seat, Pratapgad Fort, Mapro Garden, Lingmala Waterfall, Wilson Point, Kateï¿½s Point, Elephantï¿½s Head Point, Bombay Point, Lingmala Viewpoint, Panchgani (nearby), Connaught Peak, Table Land",
+    "package_type": "Relaxation",
+    "price": "10000.00",
+    "duration": "4 days 3 nights",
+    "rating": "4.1",
+    "description": "A Mahabaleshwar trip is a refreshing escape to the scenic Western Ghats of Maharashtra. Known for its lush green hills, strawberry farms, and pleasant climate, it is a popular hill station. Visitors can enjoy panoramic viewpoints, boat rides on Venna Lake, and trekking through nature trails. The serene atmosphere, misty landscapes, and local produce make Mahabaleshwar a perfect destination for relaxation and nature lovers.",
+    "available": true,
+    "image": "packages/MAHABALESHWAR.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 27,
+  "fields": {
+    "name": "Agumbe",
+    "destination": "Agumbe, Kundadri Hills, Barkana Falls, Onake Abbi Falls, Sunset View Point",
+    "package_type": "Cultural",
+    "price": "15000.00",
+    "duration": "3 days 2 nights",
+    "rating": "4.5",
+    "description": "Agumbe, often called the ï¿½Cherrapunji of South India,ï¿½ is a hidden rainforest village located in the Western Ghats of Karnataka. Famous for its heavy rainfall, misty hills, and rich biodiversity, Agumbe is a paradise for nature lovers and wildlife enthusiasts. The destination is known for breathtaking sunsets, dense tropical forests, and stunning waterfalls like Barkana Falls and Onake Abbi Falls. Agumbe is also renowned for its role in king cobra conservation and offers a peaceful retreat away from crowded tourist spots, making it ideal for eco-tourism and nature exploration.",
+    "available": true,
+    "image": "packages/agumbe_KL2prud.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 28,
+  "fields": {
+    "name": "Lepakshi",
+    "destination": "Lepakshi Temple, Hanging Pillar, Veerabhadra Temple, Nandi Statue, Lepakshi Fort Area",
+    "package_type": "Cultural",
+    "price": "10000.00",
+    "duration": "5 days 6 night",
+    "rating": "4.7",
+    "description": "Lepakshi is a historic village in Andhra Pradesh renowned for its rich architectural heritage and spiritual significance. The town is home to the famous Veerabhadra Temple, known for its exquisite Vijayanagara-style architecture, intricate murals, and the iconic hanging pillar. Lepakshi also features one of the largest monolithic Nandi statues in India. This destination offers a unique blend of history, art, mythology, and devotion, making it an ideal cultural and heritage tourism location.",
+    "available": true,
+    "image": "packages/lepakshi.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 29,
+  "fields": {
+    "name": "Kutch White Desert",
+    "destination": "Rann of Kutch (White Desert)  Bhuj City  Mandvi Beach  Kutch Handicraft Villages (like Nirona, Hodka)  Local Craft Workshops (embroidery, pottery, block printing)",
+    "package_type": "Family",
+    "price": "15000.00",
+    "duration": "10 days 11 nights",
+    "rating": "3.9",
+    "description": "Kutch in Gujarat is famous for its stunning white desert landscapes and rich artisanal traditions. Beyond the Rann Festival, travelers can explore vibrant villages where handicrafts like embroidery, leatherwork, pottery, and block printing are still practiced. The region combines natural beauty with cultural heritage, offering an immersive experience of desert life, crafts, and local traditions. Ideal for those who want to explore art, culture, rural experiences, and scenic landscapes.",
+    "available": true,
+    "image": "packages/Rann-utsav-2.webp",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 30,
+  "fields": {
+    "name": "Mizoram",
+    "destination": "Bara Bazar (local market)  Durtlang Hills (panoramic views of Aizawl)  Solomonï¿½s Temple  Reiek Heritage Village (Mizo cultural experience)  Mizoram State Museum",
+    "package_type": "Cultural",
+    "price": "15000.00",
+    "duration": "10 days 11 nights",
+    "rating": "4.2",
+    "description": "Aizawl, the picturesque hill capital of Mizoram, offers a perfect blend of culture, tradition, and natural beauty. Visitors can explore local markets, heritage villages, and cultural landmarks while enjoying the serene hill landscapes. The city is a hub of Mizo art, architecture, cuisine, and music, making it an ideal destination for cultural enthusiasts and those seeking a peaceful hill-town experience.",
+    "available": true,
+    "image": "packages/mizoram.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 31,
+  "fields": {
+    "name": "Gokarna and Murudeshwar",
+    "destination": "Murudeshwar Beach (golden sands & calm waves)  123-feet Tall Shiva Statue (iconic landmark)  Murudeshwar Temple Om Beach (serene om-shaped shoreline)  Paradise Beach (secluded, pristine)  Kudle Beach",
+    "package_type": "Cultural",
+    "price": "5000.00",
+    "duration": "6 days 7 nights",
+    "rating": "4.8",
+    "description": "This combined coastal trip explores Gokarnaï¿½s tranquil beaches and laid-back vibe along with Murudeshwarï¿½s spiritual landmarks and scenic coastline. Gokarna offers relaxation, trekking, and beach experiences, while Murudeshwar is famous for its majestic Shiva statue, seaside temple, and panoramic Arabian Sea views. Together, they provide the perfect mix of beach leisure, adventure, and spiritual tourism along Karnatakaï¿½s stunning coast.",
+    "available": true,
+    "image": "packages/gokarn.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 32,
+  "fields": {
+    "name": "Coorg, Karnataka",
+    "destination": "Coffee Plantations (lush estates and plantation tours)  Abbey Falls (picturesque waterfall surrounded by greenery)  Rajaï¿½s Seat (sunset viewpoint)  Talacauvery (birthplace of river Cauvery)  Dubare Elephant Camp (elephant interaction & river activities)",
+    "package_type": "Adventure",
+    "price": "10000.00",
+    "duration": "5 days 4 nights",
+    "rating": "3.9",
+    "description": "Coorg, also known as the ï¿½Scotland of Indiaï¿½, is a hill station in Karnataka famed for its coffee plantations, lush green landscapes, and scenic waterfalls. Visitors can enjoy plantation walks, nature treks, waterfall visits, and river activities, making it an ideal destination for nature lovers, adventure enthusiasts, and photography aficionados. The region also offers a rich cultural experience, with local cuisine and traditional Coorgi hospitality",
+    "available": true,
+    "image": "packages/coorg-karnataka.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 33,
+  "fields": {
+    "name": "Gangtok, Sikkim",
+    "destination": "Rumtek Monastery (largest monastery in Sikkim, Buddhist heritage)  Tsomgo Lake (glacial lake with stunning views)  MG Marg (shopping & local cuisine hub)  Banjhakri Falls (nature & waterfall trek)  Local Trekking Trails",
+    "package_type": "Adventure",
+    "price": "20000.00",
+    "duration": "5 days 6 night",
+    "rating": "4.8",
+    "description": "Gangtok, the capital of Sikkim, is a perfect blend of Himalayan culture, scenic beauty, and adventure activities. Travelers can explore ancient monasteries, glacial lakes, waterfalls, and trekking routes, while enjoying the local cuisine and handicrafts along MG Marg. Gangtok provides a unique mix of spiritual experiences, nature exploration, and hill-station relaxation, making it ideal for cultural enthusiasts and adventure seekers alike.",
+    "available": true,
+    "image": "packages/gangtok.webp",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 34,
+  "fields": {
+    "name": "Uttarakhanda",
+    "destination": "Rishikesh ï¿½ Shivpuri ï¿½ Kaudiyala",
+    "package_type": "Adventure",
+    "price": "20000.00",
+    "duration": "10 days 11 nights",
+    "rating": "5.0",
+    "description": "This adventure circuit along the River Ganga combines the spiritual charm of Rishikesh, the camping and adventure experiences of Shivpuri, and the extreme rafting thrills of Kaudiyala. The journey offers white-water rafting, cliff jumping, river camping, and peaceful moments with yoga and Ganga Aarti. It is an ideal destination for travelers seeking a perfect balance of adrenaline, nature, and spirituality.",
+    "available": true,
+    "image": "packages/rishikesh.webp",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.travelpackage",
+  "pk": 35,
+  "fields": {
+    "name": "Wildlife & Jungle Adventures",
+    "destination": "Tadoba Andhari Tiger Reserve (Maharashtra) ï¿½ thrilling jungle safaris and tiger sightings  Bhimashankar Wildlife Sanctuary (Maharashtra) , Sanjay Gandhi National Park (Mumbai)",
+    "package_type": "Adventure",
+    "price": "10000.00",
+    "duration": "5 days 6 nights",
+    "rating": "3.9",
+    "description": "This Wildlife & Jungle Adventure circuit offers a perfect blend of safari experiences, forest trekking, and nature exploration. From spotting tigers in Tadoba Andhari Tiger Reserve, trekking through the lush forests of Bhimashankar, to exploring the rare urban wilderness of Sanjay Gandhi National Park, this journey is ideal for wildlife lovers, trekkers, and nature enthusiasts seeking adventure close to nature.",
+    "available": true,
+    "image": "packages/wild.jpg",
+    "Hault_details": null,
+    "mode_of_travelling": null,
+    "food_services": null,
+    "supervisor": null,
+    "tags": []
+  }
+},
+{
+  "model": "packages.booking",
+  "pk": 247,
+  "fields": {
+    "user": 15,
+    "name": "Snehal Gavali",
+    "email": "snehalgavali5959@gmail.com",
+    "address": "kurduwadi",
+    "gender": "Female",
+    "datetime": "2026-03-24T00:00:00Z",
+    "num_adults": 1,
+    "num_children": 0,
+    "payment_method": "Online",
+    "package": 3,
+    "payment_status": "Pending",
+    "booking_status": "Pending",
+    "total_price": "100000.00",
+    "created_at": "2026-03-24T10:13:33.748Z",
+    "cancel_reason": null,
+    "cancelled_at": null,
+    "refund_status": "Not Applicable",
+    "refund_requested": false,
+    "refund_requested_at": null,
+    "razorpay_order_id": null,
+    "transaction_id": null,
+    "payment_screenshot": "",
+    "razorpay_signature": null
+  }
+},
+{
+  "model": "packages.booking",
+  "pk": 248,
+  "fields": {
+    "user": 15,
+    "name": "Snehal Gavali",
+    "email": "snehalgavali5959@gmail.com",
+    "address": "kurduwadi",
+    "gender": "Female",
+    "datetime": "2026-03-24T00:00:00Z",
+    "num_adults": 1,
+    "num_children": 0,
+    "payment_method": "Online",
+    "package": 3,
+    "payment_status": "Pending",
+    "booking_status": "Pending",
+    "total_price": "100000.00",
+    "created_at": "2026-03-24T10:13:34.489Z",
+    "cancel_reason": null,
+    "cancelled_at": null,
+    "refund_status": "Not Applicable",
+    "refund_requested": false,
+    "refund_requested_at": null,
+    "razorpay_order_id": null,
+    "transaction_id": null,
+    "payment_screenshot": "",
+    "razorpay_signature": null
+  }
+},
+{
+  "model": "packages.inboxmessage",
+  "pk": 1,
+  "fields": {
+    "user": 6,
+    "subject": "reply for your question",
+    "message": "pandharpur, near the ST stand",
+    "sent_by_admin": true,
+    "created_at": "2026-01-27T17:24:58.912Z",
+    "is_read": true
+  }
+},
+{
+  "model": "packages.inboxmessage",
+  "pk": 2,
+  "fields": {
+    "user": 6,
+    "subject": "place",
+    "message": "Hello Rajeshwari!! Our actual office is near Tulsi Vrundavan pandharpur",
+    "sent_by_admin": true,
+    "created_at": "2026-03-07T04:23:01.441Z",
+    "is_read": true
+  }
+},
+{
+  "model": "packages.inboxmessage",
+  "pk": 3,
+  "fields": {
+    "user": 6,
+    "subject": "place",
+    "message": "can i book for foreign?",
+    "sent_by_admin": true,
+    "created_at": "2026-03-07T04:58:40.783Z",
+    "is_read": false
+  }
+},
+{
+  "model": "packages.inboxmessage",
+  "pk": 4,
+  "fields": {
+    "user": 6,
+    "subject": "place",
+    "message": "can i book for foreign?",
+    "sent_by_admin": true,
+    "created_at": "2026-03-07T04:58:55.480Z",
+    "is_read": false
+  }
+},
+{
+  "model": "packages.inboxmessage",
+  "pk": 5,
+  "fields": {
+    "user": 6,
+    "subject": "place",
+    "message": "come at pandharpur",
+    "sent_by_admin": true,
+    "created_at": "2026-03-07T04:59:16.566Z",
+    "is_read": false
+  }
+},
+{
+  "model": "packages.contactmessage",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "name": "Rajeshwari",
+    "email": "rajeshwarigangonda19@gmail.com",
+    "screenshot": "",
+    "message": "what is the exact location of your office",
+    "created_at": "2026-01-27T17:08:38.521Z"
+  }
+},
+{
+  "model": "packages.userprofile",
+  "pk": 13,
+  "fields": {
+    "user": 15,
+    "phone": "7219572296",
+    "gender": "",
+    "company": ""
+  }
+},
+{
+  "model": "packages.blog",
+  "pk": 1,
+  "fields": {
+    "title": "Top 10 must visited places in India",
+    "slug": "indias-top-10-visited-places",
+    "image": "blogs/blog4.jpg",
+    "short_desc": "India is a land of diverse beauty, rich heritage, and unforgettable experiences. From historical monuments and spiritual cities to beaches and hill stations, these top 10 most visited places in India attract millions of travelers every year.",
+    "full_content": "Agra ï¿½ Home to the iconic Taj Mahal, Agra symbolizes eternal love and Mughal architecture.\r\nDelhi ï¿½ Indiaï¿½s capital blends ancient history with modern lifestyle and monuments.\r\nJaipur ï¿½ The Pink City is famous for royal palaces, forts, and colorful bazaars.\r\nGoa ï¿½ Indiaï¿½s beach capital known for nightlife, water sports, and scenic beaches.\r\nMumbai ï¿½ The city of dreams offers Bollywood glamour, sea views, and vibrant life.\r\nVaranasi ï¿½ One of the oldest cities in the world, famous for spirituality and ghats.\r\nManali ï¿½ A popular hill station known for snow, adventure sports, and honeymoon trips.\r\nUdaipur ï¿½ The City of Lakes, famous for romance, palaces, and heritage hotels.\r\nRishikesh ï¿½ Yoga capital of the world with spiritual vibes and adventure activities.\r\nKolkata ï¿½ Cultural capital of India with colonial architecture and artistic heritage.",
+    "date": "2025-12-30"
+  }
+},
+{
+  "model": "packages.feedback",
+  "pk": 1,
+  "fields": {
+    "user": 7,
+    "package": 6,
+    "name": "rajeshwarigangonda19@gmail.com",
+    "message": "good",
+    "rating": 4,
+    "created_at": "2025-12-31T18:13:54.400Z"
+  }
+},
+{
+  "model": "packages.feedback",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "package": 1,
+    "name": "Aishwarya Kulkarni",
+    "message": "go",
+    "rating": 5,
+    "created_at": "2025-12-31T18:21:39.548Z"
+  }
+},
+{
+  "model": "packages.feedback",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "package": null,
+    "name": "Aishwarya Kulkarni",
+    "message": "good",
+    "rating": 5,
+    "created_at": "2026-01-10T17:35:03.826Z"
+  }
+},
+{
+  "model": "packages.country",
+  "pk": 6,
+  "fields": {
+    "name": "New York",
+    "cover_image": "countries/destination-9.jpg",
+    "place1_name": "Statue of Liberty",
+    "place1_image": "places/place1.avif",
+    "place1_description": "The Statue of Liberty is a famous symbol of freedom located on Liberty Island in New York Harbor. It was a gift from France to the United States in 1886 to celebrate American independence. Designed by Frï¿½dï¿½ric Auguste Bartholdi, its internal structure was built by Gustave Eiffel.",
+    "place2_name": "Central Park",
+    "place2_image": "places/place2.jpg",
+    "place2_description": "Central Park is a large public park located in the center of Manhattan, New York City. It was opened in 1858 and designed by Frederick Law Olmsted and Calvert Vaux.\r\n\r\nThe park covers about 843 acres and includes walking paths, lakes, gardens, playgrounds, and open spaces. It is a popular place for relaxation, sports, and tourism, and is one of the most visited parks in the world.",
+    "place3_name": "Brooklyn Bridge",
+    "place3_image": "places/place3.webp",
+    "place3_description": "The Brooklyn Bridge is a historic suspension bridge in New York City that connects Manhattan and Brooklyn across the East River. It was completed in 1883 and was one of the first steel-wire suspension bridges in the world.\r\n\r\nDesigned by John A. Roebling, it is about 1,595 feet (486 meters) long and is a popular landmark for walking, cycling, and enjoying city views.",
+    "place4_name": "Fifth Avenue",
+    "place4_image": "places/place4.jpg",
+    "place4_description": "Fifth Avenue is a famous street in Manhattan, New York City. It is known for luxury shopping, high-end brands, and popular landmarks.\r\n\r\nThe avenue also passes by attractions like the Empire State Building, Rockefeller Center, and Central Park. It is one of the most well-known and expensive shopping streets in the world."
+  }
+},
+{
+  "model": "packages.country",
+  "pk": 7,
+  "fields": {
+    "name": "Japan",
+    "cover_image": "countries/jp.jpg",
+    "place1_name": "Mount Fuji (Fujisan)",
+    "place1_image": "places/jplace1.webp",
+    "place1_description": "Mount Fuji is the highest mountain in Japan, standing at 3,776 meters (12,389 feet). It is an active volcano located on Honshu Island, about 100 km from Tokyo.\r\n\r\nMount Fuji is a symbol of Japan and is famous for its nearly perfect cone shape. It is a popular destination for climbing, sightseeing, and photography. In 2013, it was recognized as a UNESCO World Heritage Site.",
+    "place2_name": "Tokyo Tower",
+    "place2_image": "places/jplace2.avif",
+    "place2_description": "Tokyo Tower is a famous landmark located in Tokyo, Japan. It was completed in 1958 and is inspired by the Eiffel Tower in France.\r\n\r\nThe tower stands 333 meters tall and is used for broadcasting and tourism. Visitors can go to the observation decks to enjoy beautiful views of Tokyo city. It is painted red and white for air safety and is one of Tokyoï¿½s most popular attractions.",
+    "place3_name": "Hiroshima Peace Memorial Park",
+    "place3_image": "places/jplace3.avif",
+    "place3_description": "Hiroshima Peace Memorial Park is a memorial park located in Hiroshima, Japan. It was built to honor the victims of the atomic bomb dropped on August 6, 1945.\r\n\r\nThe park includes the Atomic Bomb Dome, Peace Memorial Museum, and the Childrenï¿½s Peace Monument. It serves as a symbol of peace and a reminder of the importance of a world without nuclear weapons.",
+    "place4_name": "Shibuya Crossing",
+    "place4_image": "places/jplace4.jpg",
+    "place4_description": "Shibuya Crossing is a famous pedestrian crossing located in front of Shibuya Station in Tokyo, Japan. It is known as one of the busiest intersections in the world, where hundreds of people cross at the same time from all directions.\r\n\r\nIt is a popular tourist spot and a symbol of Tokyoï¿½s modern, fast-paced city life."
+  }
+},
+{
+  "model": "packages.country",
+  "pk": 8,
+  "fields": {
+    "name": "Dubai",
+    "cover_image": "countries/ddubai.webp",
+    "place1_name": "Burj Khalifa",
+    "place1_image": "places/dplace1.jpg",
+    "place1_description": "Burj Khalifa is the tallest building in the world, located in Dubai, United Arab Emirates. It was completed in 2010 and stands at 828 meters (2,717 feet) tall.\r\n\r\nThe skyscraper has offices, residences, restaurants, and observation decks that offer amazing views of the city. It is one of the most famous landmarks in the world and a symbol of modern Dubai.",
+    "place2_name": "Palm Jumeirah",
+    "place2_image": "places/dplace2.webp",
+    "place2_description": "Palm Jumeirah is a man-made island in Dubai, United Arab Emirates. It is shaped like a palm tree and was built in the Persian Gulf.\r\n\r\nThe island is home to luxury hotels, apartments, restaurants, and beaches, including the famous Atlantis Hotel. It is one of Dubaiï¿½s most popular tourist attractions and a symbol of modern engineering.",
+    "place3_name": "Desert Safari",
+    "place3_image": "places/ddesert.jpg",
+    "place3_description": "Desert Safari is a popular tourist activity in Dubai where visitors explore the desert. It includes exciting activities like dune bashing in 4x4 vehicles, camel riding, sandboarding, and watching sunset views.\r\n\r\nIn the evening, visitors can enjoy traditional Arabic food, cultural shows, and entertainment at a desert camp. It is one of the most famous adventure experiences in Dubai.",
+    "place4_name": "Jumeirah Beach",
+    "place4_image": "places/dplace4.avif",
+    "place4_description": "Jumeirah Beach is a popular public beach in Dubai, United Arab Emirates. It is known for its white sand, clear blue water, and beautiful views of the Burj Al Arab hotel.\r\n\r\nThe beach is a great place for swimming, relaxing, and water sports. It is one of the most visited tourist spots in Dubai."
+  }
+},
+{
+  "model": "packages.country",
+  "pk": 9,
+  "fields": {
+    "name": "singapore",
+    "cover_image": "countries/ssing.jpg",
+    "place1_name": "Marina Bay Sands",
+    "place1_image": "places/splace1.avif",
+    "place1_description": "Marina Bay Sands is a famous luxury hotel and entertainment complex in Singapore. It opened in 2010 and is known for its unique design of three towers connected by a rooftop SkyPark.\r\n\r\nThe SkyPark features a large infinity pool, gardens, and an observation deck with amazing city views. The complex also includes a shopping mall, casino, museum, restaurants, and theaters. It is one of Singaporeï¿½s most iconic landmarks.",
+    "place2_name": "Sentosa Island",
+    "place2_image": "places/splace2.webp",
+    "place2_description": "Sentosa Island is a popular resort island in Singapore known for its beaches, theme parks, and attractions. It is a top tourist destination offering fun activities for families and visitors.\r\n\r\nThe island is home to Universal Studios Singapore, S.E.A. Aquarium, Adventure Cove Waterpark, and beautiful beaches like Siloso Beach. It is a perfect place for relaxation and entertainment.",
+    "place3_name": "Orchard Road",
+    "place3_image": "places/splace3.jpg",
+    "place3_description": "Orchard Road is the main shopping street in Singapore. It is famous for its large shopping malls, luxury brands, restaurants, and entertainment options.\r\n\r\nThe area is a popular destination for both tourists and locals, especially during festivals and holiday seasons when it is beautifully decorated. It is known as the heart of shopping in Singapore",
+    "place4_name": "Singapore Zoo",
+    "place4_image": "places/splace4.jpg",
+    "place4_description": "Singapore Zoo is a famous wildlife park in Singapore, opened in 1973. It is known for its open and natural-style enclosures, where animals live in environments similar to their natural habitats.\r\n\r\nThe zoo is home to over 2,800 animals from around the world, including orangutans, lions, and elephants. It is one of the best zoos in the world and a popular attraction for families and tourists."
+  }
+},
+{
+  "model": "packages.country",
+  "pk": 10,
+  "fields": {
+    "name": "Switzerland",
+    "cover_image": "countries/sswitch.jpg",
+    "place1_name": "Zermatt & Matterhorn",
+    "place1_image": "places/sw1.jpg",
+    "place1_description": "Zermatt is a beautiful mountain village in Switzerland, famous for its stunning views and skiing resorts. It is located at the base of the Matterhorn, one of the most iconic and photographed mountains in the world.\r\n\r\nThe Matterhorn stands about 4,478 meters (14,692 feet) tall and is known for its unique pyramid shape. Zermatt is a popular destination for hiking, skiing, and mountaineering, attracting visitors all year round",
+    "place2_name": "Lake Geneva",
+    "place2_image": "places/sw2.webp",
+    "place2_description": "Lake Geneva is one of the largest lakes in Europe, located between Switzerland and France. It is surrounded by beautiful mountains, vineyards, and charming cities like Geneva, Lausanne, and Montreux.\r\n\r\nThe lake is popular for boat cruises, swimming, and scenic views. It is known for its natural beauty and peaceful atmosphere, making it a major tourist attraction in Switzerland.",
+    "place3_name": "Lucerne",
+    "place3_image": "places/sw3.avif",
+    "place3_description": "Lucerne is a beautiful city in central Switzerland, located on the shores of Lake Lucerne and surrounded by mountains. It is known for its well-preserved medieval architecture and scenic views.\r\n\r\nThe cityï¿½s most famous landmark is the Chapel Bridge (Kapellbrï¿½cke), a historic wooden bridge. Lucerne is a popular tourist destination for its culture, history, and access to nearby mountains like Mount Pilatus and Mount Rigi.",
+    "place4_name": "Montreux",
+    "place4_image": "places/sw4.webp",
+    "place4_description": "Montreux is a beautiful lakeside town in Switzerland, located on the shores of Lake Geneva. It is famous for its mild climate, scenic mountain views, and charming promenade.\r\n\r\nMontreux is best known for the Montreux Jazz Festival, one of the worldï¿½s most famous music festivals. It is a popular destination for tourists who enjoy music, nature, and relaxing lake views."
+  }
+},
+{
+  "model": "news.travelnews",
+  "pk": 1,
+  "fields": {
+    "title": "Global Travel Demand Surges Ahead of 2026",
+    "link": "https://www.travelandleisure.com/global-travel-trends-2025",
+    "content": "Global tourism continues its strong recovery, with international travel numbers nearing pre-pandemic levels. Airlines are expanding routes across Asia and the Middle East, while travelers are opting for longer, experience-based journeys instead of short city breaks. Industry experts predict sustained growth into 2026, driven by digital booking platforms and flexible travel policies",
+    "published_date": "2025-12-28",
+    "image_url": "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?cs=srgb&dl=pexels-freestockpro-3278215.jpg&fm=jpg",
+    "category": "Global Travel Trends",
+    "read_time": 2
+  }
+},
+{
+  "model": "news.travelnews",
+  "pk": 2,
+  "fields": {
+    "title": "India Sees Strong Growth in Domestic Tourism",
+    "link": "https://www.business-standard.com/industry/news/indian-tourism-growth-2025",
+    "content": "Indiaï¿½s domestic tourism sector has recorded a significant rise in bookings, particularly for hill stations, heritage cities, and pilgrimage destinations. Improved infrastructure, new Vande Bharat routes, and government tourism campaigns have contributed to the surge. Travel agencies report higher demand for curated cultural and eco-friendly tour packages.",
+    "published_date": "2025-12-26",
+    "image_url": "https://indiator.com/tourist-places/wp-content/uploads/2019/01/When-Where-to-Go-in-India-2019.png",
+    "category": "India Travel News",
+    "read_time": 15
+  }
+},
+{
+  "model": "news.travelnews",
+  "pk": 3,
+  "fields": {
+    "title": "Winter Weather Disrupts International Flights",
+    "link": "https://www.aljazeera.com/news/winter-storm-flight-disruptions",
+    "content": "Severe winter storms across North America and Europe have caused widespread flight delays and cancellations during the holiday travel season. Airlines have advised passengers to monitor flight status and allow extra time for connections. Travel insurance claims related to weather disruptions have also increased sharply.",
+    "published_date": "2025-12-27",
+    "image_url": "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg",
+    "category": "Aviation and alert",
+    "read_time": 20
+  }
+},
+{
+  "model": "news.travelnews",
+  "pk": 4,
+  "fields": {
+    "title": "Sustainable Travel Becomes a Top Priority for Tourists",
+    "link": "https://www.ndtv.com/travel/sustainable-tourism-trends-2025",
+    "content": "A growing number of travelers are choosing eco-friendly accommodations, low-carbon transport options, and community-based tourism experiences. Surveys show that sustainability now influences destination choice, especially among younger travelers. Tourism boards worldwide are promoting responsible travel initiatives.",
+    "published_date": "2025-12-24",
+    "image_url": "https://sb.ecobnb.net/app/uploads/sites/3/2022/03/Progetto-senza-titolo.jpg",
+    "category": "Sustainable Travel",
+    "read_time": 20
+  }
+},
+{
+  "model": "news.travelnews",
+  "pk": 5,
+  "fields": {
+    "title": "Southeast Asia Emerges as Most Booked International Region",
+    "link": "https://timesofindia.indiatimes.com/travel/international-travel-trends-2025",
+    "content": "Thailand, Vietnam, and Indonesia have emerged as the most booked international destinations for Indian travelers in late 2025. Affordable packages, visa-friendly policies, and rich cultural experiences have driven demand. Travel platforms report a sharp rise in first-time international travelers.",
+    "published_date": "2025-12-25",
+    "image_url": "https://blog.dookinternational.com/images/post-media/rTcIY1721810319.jpg",
+    "category": "International destination",
+    "read_time": 10
+  }
+},
+{
+  "model": "home.gallery",
+  "pk": 1,
+  "fields": {
+    "title": "Company",
+    "image": "gallery/company.jpg",
+    "description": "",
+    "created_at": "2026-03-06T17:27:41.227Z"
+  }
+}
+]
