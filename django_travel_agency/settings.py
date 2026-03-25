@@ -23,7 +23,11 @@ SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-default-key")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "django-travel-agency-production-2651.up.railway.app",
+    "localhost",
+    "127.0.0.1"
+]
 
 # ===============================
 # APPLICATIONS
@@ -224,3 +228,7 @@ LOGGING = {
         },
     },
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://django-travel-agency-production-2651.up.railway.app"
+]
