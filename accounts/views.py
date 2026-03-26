@@ -22,7 +22,7 @@ def admin_gallery(request):
     if request.method == "POST":
         title = request.POST.get("title")
         description = request.POST.get("description")
-        image = request.FILES.get("image")
+        image = request.POST.get("image")
 
         if title and image:
             Gallery.objects.create(
@@ -40,7 +40,7 @@ def admin_update_package(request, pk):
     package = get_object_or_404(TravelPackage, pk=pk)
 
     if request.method == "POST":
-        form = TravelPackageForm(request.POST, request.FILES, instance=package)
+        form = TravelPackageForm(request.POST, instance=package)
         if form.is_valid():
             form.save()
             return redirect('admin_package_list')
@@ -137,7 +137,7 @@ def admin_blog_list(request):
 @staff_member_required
 def admin_add_blog(request):
     if request.method == "POST":
-        form = BlogForm(request.POST, request.FILES)
+        form = BlogForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('admin_blog_list')
@@ -156,7 +156,7 @@ def admin_update_blog(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
 
     if request.method == "POST":
-        form = BlogForm(request.POST, request.FILES, instance=blog)
+        form = BlogForm(request.POST, instance=blog)
         if form.is_valid():
             form.save()
             return redirect('admin_blog_list')
@@ -244,7 +244,7 @@ def admin_country_list(request):
 @staff_member_required
 def admin_add_country(request):
     if request.method == 'POST':
-        form = CountryForm(request.POST, request.FILES)
+        form = CountryForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('admin_country_list')
@@ -263,7 +263,7 @@ def admin_edit_country(request, pk):
     country = get_object_or_404(Country, pk=pk)
 
     if request.method == 'POST':
-        form = CountryForm(request.POST, request.FILES, instance=country)
+        form = CountryForm(request.POST, instance=country)
         if form.is_valid():
             form.save()
             return redirect('admin_country_list')
@@ -322,7 +322,7 @@ def admin_package_list(request):
 @staff_member_required
 def admin_add_package(request):
     if request.method == 'POST':
-        form = TravelPackageForm(request.POST, request.FILES)
+        form = TravelPackageForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('admin_package_list')

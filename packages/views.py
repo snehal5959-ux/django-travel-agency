@@ -526,7 +526,7 @@ def payment_success(request, booking_id):
 
         booking.email = request.POST.get("email")
         booking.transaction_id = request.POST.get("transaction_id")
-        booking.payment_screenshot = request.FILES.get("payment_screenshot")
+        booking.payment_screenshot = request.POST.get("payment_screenshot")
 
         booking.payment_status = "Paid"
         booking.booking_status = "Confirmed"

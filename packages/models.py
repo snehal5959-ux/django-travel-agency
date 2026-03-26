@@ -24,7 +24,7 @@ class TravelPackage(models.Model):
     description = models.TextField()
     available = models.BooleanField(default=True)  
     tags = models.ManyToManyField('Tag', related_name='travel_packages', blank=True)
-    image = models.ImageField(upload_to="packages/", null=True, blank=True)
+    image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter absolute image URL')
     Hault_details = models.CharField(max_length=255, blank=True, null=True)
     mode_of_travelling = models.CharField(max_length=255, blank=True, null=True)
     food_services = models.CharField(max_length=255, blank=True, null=True)
@@ -119,16 +119,12 @@ class Booking(models.Model):
     )
 
     transaction_id = models.CharField(
-    max_length=200,
-    blank=True,
-    null=True
-)
+        max_length=200,
+        blank=True,
+        null=True
+    )
 
-    payment_screenshot = models.ImageField(
-    upload_to="payment_screenshots/",
-    blank=True,
-    null=True
-)
+    payment_screenshot = models.URLField(max_length=500, blank=True, null=True, help_text='Enter payment screenshot URL')
 
     razorpay_signature = models.CharField(
         max_length=255,
@@ -166,11 +162,7 @@ class ContactMessage(models.Model):
     )
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    screenshot = models.ImageField(
-        upload_to="payment_screenshots/",
-        blank=True,
-        null=True
-    )
+    screenshot = models.URLField(max_length=500, blank=True, null=True, help_text='Enter screenshot URL')
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -214,7 +206,7 @@ class UserProfile(models.Model):
     
 class Gallery(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='gallery/')
+    image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter image URL')
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -224,7 +216,7 @@ class Gallery(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
-    image = models.ImageField(upload_to='blogs/')
+    image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter image URL')
     short_desc = models.TextField()
     full_content = models.TextField()
     date = models.DateField(auto_now_add=True)
@@ -267,22 +259,22 @@ class Favourite(models.Model):
 
 class Country(models.Model):
     name = models.CharField(max_length=100, db_index=True)  # ✅ ADD INDEX
-    cover_image = models.ImageField(upload_to='countries/', blank=True, null=True)
+    cover_image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter cover image URL')
 
     place1_name = models.CharField(max_length=100, blank=True, null=True)
-    place1_image = models.ImageField(upload_to='places/', blank=True, null=True)
+    place1_image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter place1 image URL')
     place1_description = models.TextField(blank=True, null=True)
 
     place2_name = models.CharField(max_length=100, blank=True, null=True)
-    place2_image = models.ImageField(upload_to='places/', blank=True, null=True)
+    place2_image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter place2 image URL')
     place2_description = models.TextField(blank=True, null=True)
 
     place3_name = models.CharField(max_length=100, blank=True, null=True)
-    place3_image = models.ImageField(upload_to='places/', blank=True, null=True)
+    place3_image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter place3 image URL')
     place3_description = models.TextField(blank=True, null=True)
 
     place4_name = models.CharField(max_length=100, blank=True, null=True)
-    place4_image = models.ImageField(upload_to='places/', blank=True, null=True)
+    place4_image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter place4 image URL')
     place4_description = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -294,7 +286,7 @@ class Place(models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='places', db_index=True)  # ✅ ADD INDEX
     name = models.CharField(max_length=150)
     description = models.TextField()
-    image = models.ImageField(upload_to='places/')
+    image = models.URLField(max_length=500, blank=True, null=True, help_text='Enter image URL')
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):

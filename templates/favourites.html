@@ -7,7 +7,7 @@
             {% for fav in fav_packages %}
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="{{ fav.package.image.url }}" class="card-img-top" alt="{{ fav.package.name }}">
+                    <img src="{{ fav.package.image }}" class="card-img-top" alt="{{ fav.package.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ fav.package.name }}</h5>
                         <p class="card-text">${{ fav.package.price }}</p>

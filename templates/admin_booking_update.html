@@ -19,7 +19,7 @@
 
     <p><strong>Payment Screenshot:</strong></p>
     {% if booking.payment_screenshot %}
-        <img src="{{ booking.payment_screenshot.url }}"
+        <img src="{{ booking.payment_screenshot }}"
              width="300"
              class="img-fluid rounded border">
     {% else %}
@@ -28,7 +28,7 @@
 
     <hr>
 
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
 
