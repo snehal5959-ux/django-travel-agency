@@ -1,4 +1,4 @@
-[
+﻿[
 {
   "model": "packages.travelpackage",
   "pk": 1,
@@ -9,7 +9,7 @@
     "price": "25000.00",
     "duration": "5 days 4 nights",
     "rating": "4.3",
-    "description": "A Kerala trip offers a perfect blend of natural beauty, culture, and relaxation. Known as God�s Own Country, Kerala is famous for its serene backwaters, lush green hill stations, and pristine beaches. Visitors can enjoy peaceful houseboat cruises in Alleppey and breathtaking views in Munnar. The state�s rich traditions, vibrant festivals, and Ayurvedic therapies add a unique charm. Delicious South Indian cuisine and warm hospitality make the Kerala trip truly memorable",
+    "description": "A Kerala trip offers a perfect blend of natural beauty, culture, and relaxation. Known as God's Own Country, Kerala is famous for its serene backwaters, lush green hill stations, and pristine beaches. Visitors can enjoy peaceful houseboat cruises in Alleppey and breathtaking views in Munnar. The state's rich traditions, vibrant festivals, and Ayurvedic therapies add a unique charm. Delicious South Indian cuisine and warm hospitality make the Kerala trip truly memorable",
     "available": true,
     "image": "packages/kerala-main.jpg",
     "Hault_details": "Houseboat cruise in Alleppey backwaters, tea plantation visits in Munnar, wildlife exploration in Thekkady, cultural experiences in Kochi, beach relaxation at Kovalam",
@@ -32,7 +32,7 @@
     "description": "A Manali trip is a perfect escape into the lap of the Himalayas. Surrounded by snow-capped mountains, lush valleys, and pine forests, Manali offers breathtaking natural beauty. It is a popular destination for adventure activities like paragliding, river rafting, and skiing. The cool climate and peaceful atmosphere make it ideal for relaxation. Local markets, temples, and scenic spots add cultural charm to the journey.",
     "available": true,
     "image": "packages/kullumanali.jpg",
-    "Hault_details": "Hidimba Mandir � Explore the ancient wooden temple and serene cedar forests. Manikaran Gurudwara � Visit the sacred Sikh shrine and enjoy hot springs. Parvati Valley Trek � Trek through scenic villages, rivers, and lush trails. Shimla Trek � Adventure tre",
+    "Hault_details": "Hidimba Mandir ' Explore the ancient wooden temple and serene cedar forests. Manikaran Gurudwara ' Visit the sacred Sikh shrine and enjoy hot springs. Parvati Valley Trek ' Trek through scenic villages, rivers, and lush trails. Shimla Trek � Adventure tre",
     "mode_of_travelling": "Arrival at Shimla by airplane or train. Shimla to Manali via private AC cab or Volvo bus. Local sightseeing in Manali including Hidimba Mandir by private cab. Manali to Kasol / Manikaran Gurudwara by AC cab. Parvati Valley trekking on foot with luggage ca",
     "food_services": "Daily breakfast included at hotels or guesthouses. Traditional Himachali meals available, with vegetarian and non-vegetarian options. Packed meals or local cuisine during trekking and Parvati Valley exploration.",
     "supervisor": "Experienced tour supervisor",
