@@ -21,7 +21,7 @@ class TravelPackage(models.Model):
     description = models.TextField()
     available = models.BooleanField(default=True)  
     tags = models.ManyToManyField('Tag', related_name='travel_packages', blank=True)
-    image = models.ImageField(upload_to="packages/", null=True, blank=True) 
+    image = models.URLField(max_length=500, blank=True, null=True) 
 
     def __str__(self):
         return self.name 
