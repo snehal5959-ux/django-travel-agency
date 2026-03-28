@@ -95,6 +95,13 @@
     </form>
 
 </div>
+{% if request.resolver_match.url_name != 'home-index' %}
+        <a href="{% url 'home-index' %}#home"
+           style="position:fixed;right:20px;bottom:20px;z-index:1050;"
+           class="btn btn-primary rounded-pill shadow">
+            Back To Home
+        </a>
+        {% endif %}
 
 </body>
 </html>

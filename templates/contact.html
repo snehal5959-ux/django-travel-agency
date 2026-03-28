@@ -1,3 +1,5 @@
+{% extends 'navbar.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,31 +19,9 @@
             background-color: #f4f7fb;
         }
 
-        /* Top Bar */
-        .top-bar {
-            background: #0b2c66;
-            color: #fff;
-            padding: 15px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      
+       
 
-        .top-bar .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .top-bar nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-        }
-
-        .top-bar nav a:hover {
-            text-decoration: underline;
-        }
 
         /* Contact Section */
         .contact-section {
@@ -186,15 +166,6 @@ input:focus, textarea:focus {
 
 <body>
 
-<header class="top-bar">
-    <div class="logo">Pandurang Travels</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Packages</a>
-        <a href="#">Login</a>
-    </nav>
-</header>
-
 <section class="contact-section">
     <div class="contact-container">
         <h2>Contact Us</h2>
@@ -266,3 +237,5 @@ input:focus, textarea:focus {
 
 </body>
 </html>
+
+{% endblock %} 

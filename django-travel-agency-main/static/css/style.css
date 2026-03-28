@@ -429,6 +429,21 @@
 /*** About End ***/
 
 
+
+/* STAR */
+.star-rating .fa-star {
+    color: #ccc;
+}
+
+.star-rating .filled {
+    color: #ffc107;
+}
+
+/* BUTTON */
+.btn-hover:hover {
+    background: #fff;
+    color: #0d6efd;
+}
 /*** Services Start ***/
 .service .service-content-inner {
     transition: 0.5s;
@@ -1419,4 +1434,68 @@
     color: red; /* Red text for the error message */
     font-size: 0.9rem; /* Optional: Adjust font size for error messages */
     margin-top: 5px; /* Add space between input and error message */
+}
+/* PACKAGE CARD */
+.packages-item {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* FIX IMAGE SIZE */
+.package-img {
+    width: 100%;
+    height: 230px;          /* FIXED HEIGHT */
+    object-fit: cover;      /* NO STRETCH */
+}
+
+/* IMAGE HOVER */
+.packages-img {
+    overflow: hidden;
+}
+
+.packages-img img {
+    transition: 0.4s ease;
+}
+
+.packages-img:hover img {
+    transform: scale(1.1);
+}
+
+/* PRICE BADGE */
+.packages-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #0d6efd;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+/* INFO BAR */
+.packages-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    font-size: 13px;
+}
+
+/* CONTENT FIX HEIGHT */
+.packages-content {
+    min-height: 200px;   /* SAME SIZE CARDS */
+}
+
+/* TAG STYLE */
+.package-tag {
+    display: inline-block;
+    background: #13357B;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 3px;
 }

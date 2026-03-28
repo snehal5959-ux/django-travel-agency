@@ -1,11 +1,333 @@
+{% load static %}
+
 <style>
-    .btn-hover, .btn {
-        position: static !important;
-        display: inline-block !important;
-        width: auto !important;
+    /* ===== Package Cards Styling ===== */
+    .packages-carousel {
+        position: relative;
     }
-    .col-6, .col-12 {
-        overflow: visible !important;
+
+    .package-carousel-inner {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        padding: 20px 0;
+        scroll-behavior: smooth;
+    }
+
+    .package-carousel-inner::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .package-carousel-inner::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .package-carousel-inner::-webkit-scrollbar-thumb {
+        background: #13357B;
+        border-radius: 10px;
+    }
+
+    .pkg-card {
+        position: relative;
+        flex: 0 0 350px;
+        height: 450px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .pkg-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 20px 50px rgba(19, 53, 123, 0.25);
+    }
+
+    /* Background Image */
+    .pkg-card-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.6s ease;
+    }
+
+    .pkg-card:hover .pkg-card-image {
+        transform: scale(1.05);
+    }
+
+    /* Dark Overlay Gradient */
+    .pkg-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, 
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.35) 40%,
+            rgba(0, 0, 0, 0.8) 100%);
+        z-index: 2;
+        transition: all 0.4s ease;
+    }
+
+    .pkg-card:hover::before {
+        background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.45) 40%,
+            rgba(0, 0, 0, 0.85) 100%);
+    }
+
+    /* Content Container - Positioned */
+    .pkg-card-overlay {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+        color: white;
+    }
+
+    /* Top Section - Badge & Price */
+    .pkg-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    /* Package Type Badge */
+    .pkg-type-badge {
+        background: linear-gradient(135deg, #13357B 0%, #0d2659 100%);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        box-shadow: 0 4px 12px rgba(19, 53, 123, 0.4);
+    }
+
+    /* Price Badge */
+    .pkg-price-badge {
+        background: rgba(255, 255, 255, 0.95);
+        color: #13357B;
+        padding: 8px 14px;
+        border-radius: 24px;
+        font-weight: 700;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mid Section - Title & Info */
+    .pkg-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .pkg-card-title {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        line-height: 1.2;
+    }
+
+    .pkg-card-destination {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .pkg-card-destination i {
+        font-size: 16px;
+    }
+
+    .pkg-card-description {
+        font-size: 13px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 12px;
+    }
+
+    /* Info Row */
+    .pkg-info-row {
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .pkg-info-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .pkg-info-item i {
+        font-size: 14px;
+    }
+
+    /* Rating */
+    .pkg-rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .pkg-rating i {
+        color: #ffc107;
+        font-size: 13px;
+    }
+
+    /* Bottom Section - Buttons */
+    .pkg-card-footer {
+        display: flex;
+        gap: 10px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        flex-wrap: wrap;
+    }
+
+    /* Optimized Buttons */
+    .pkg-btn {
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        white-space: nowrap;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .pkg-btn-primary {
+        background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+        color: #13357B;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(19, 53, 123, 0.3);
+    }
+
+    .pkg-btn-primary:hover {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e8e9ea 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(19, 53, 123, 0.4);
+        color: #13357B;
+        text-decoration: none;
+    }
+
+    .pkg-btn-secondary {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .pkg-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: white;
+        transform: translateY(-2px);
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Availability Button - No longer overlay */
+    .pkg-btn-available {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        color: white;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+    }
+
+    .pkg-btn-available:hover {
+        background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        text-decoration: none;
+    }
+
+    .pkg-btn-unavailable {
+        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        color: white;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(220, 53, 69, 0.3);
+    }
+
+    .pkg-btn-unavailable:hover {
+        background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4);
+        text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .pkg-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .pkg-card {
+            height: 480px;
+        }
+
+        .pkg-card-overlay {
+            padding: 16px;
+        }
+
+        .pkg-card-title {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pkg-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .pkg-card {
+            height: 450px;
+        }
+
+        .pkg-card-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .pkg-card-footer {
+            flex-direction: column;
+        }
+
+        .pkg-btn {
+            width: 100%;
+        }
     }
 </style>
 
@@ -16,83 +338,105 @@
             <h1 class="mb-0">Awesome Packages</h1>
         </div>
 
-        <div class="packages-carousel owl-carousel">
-            {% for package in packages %}
-            <div class="packages-item">
-                <div class="packages-img">
-                    {% load static %}
-                    <img src="{{ package.image }}" class="img-fluid w-100 rounded-top" alt="Image">
-
-                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                        <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-marker-alt me-2"></i>{{ package.destination }}
-                        </small>
-                        <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-calendar-alt me-2"></i>{{ package.duration }}
-                        </small>
-                        <small class="flex-fill text-center py-2">
-                            <i class="fa fa-user me-2"></i>
-                            {% if package.available %}Available{% else %}Not Available{% endif %}
-                        </small>
-                    </div>
-
-                    <div class="packages-price py-2 px-4">
-                        ₹{{ package.price }}
-                    </div>
-                </div>
-
-                <div class="packages-content bg-light">
-                    <div class="p-4 pb-0">
-                        <h5 class="mb-0">{{ package.name }}</h5>
-
-                        <div>
-                            {% for tag in package.tags.all %}
-                            <small class="mb-3" style="display: inline-block; text-transform: uppercase; font-weight: bold; color: #fff; background-color: #13357B; padding: 5px 15px; border-radius: 20px; font-size: 0.875em; margin-bottom: 8px; margin-top: 8px;">
-                                {{ tag }}
-                            </small>
-                            {% endfor %}
-                        </div>
-
-                        <div class="mb-3 star-rating">
-                            {% for i in ratings_range %}
-                                {% if i <= package.rating %}
-                                    <small class="fa fa-star filled"></small>
+        {% if packages %}
+        <div class="packages-carousel">
+            <div class="package-carousel-inner">
+                {% for package in packages %}
+                <div class="pkg-card">
+                    <!-- Background Image -->
+                    <div class="pkg-card-image" style="
+                        {% with image_src=package.image|default:'' %}
+                            {% if image_src %}
+                                {% if image_src|slice:":4" == "http" or image_src|slice:":2" == "//" %}
+                                    background-image: url('{{ image_src }}');
+                                {% elif image_src|slice:":1" == "/" %}
+                                    background-image: url('{{ image_src }}');
                                 {% else %}
-                                    <small class="fa fa-star"></small>
+                                    background-image: url('/media/{{ image_src }}');
                                 {% endif %}
-                            {% endfor %}
-                            <span>{{ package.rating }} / 5</span>
+                            {% else %}
+                                background-image: url('{% static 'img/packages-1.jpg' %}');
+                            {% endif %}
+                        {% endwith %}
+                    "></div>
+
+                    <!-- Content Overlay -->
+                    <div class="pkg-card-overlay">
+                        <!-- Header: Badge & Price -->
+                        <div class="pkg-card-header">
+                            <span class="pkg-type-badge">{{ package.package_type }}</span>
+                            <div class="pkg-price-badge">₹{{ package.price }}</div>
                         </div>
 
-                        <p class="mb-4">{{ package.description|truncatewords:14 }}</p>
-                    </div>
+                        <!-- Content: Title & Description -->
+                        <div class="pkg-card-content">
+                            <h3 class="pkg-card-title">{{ package.name }}</h3>
 
-                    <div class="row bg-primary rounded-bottom mx-0">
-                        <div class="col-6 text-start px-0"></div>
-
-                        <div class="col-6 text-end px-0">
-                            <div class="col-12 px-0 d-flex justify-content-end gap-2">
-                                <a href="{% url 'booking_handler_view' package_id=package.id %}" class="btn-hover btn text-white py-2 px-4">
-                                    Book Now
-                                </a>
-                             <a href="{% url 'travel_package_detail' package_id=package.id %}" 
-   class="btn-hover btn text-white py-2 px-4">
-    Read more
-</a>
+                            <div class="pkg-card-destination">
+                                <i class="fa fa-map-marker-alt"></i>
+                                {{ package.destination|truncatechars:32 }}
                             </div>
+
+                            <p class="pkg-card-description">
+                                {{ package.description|truncatewords:16 }}
+                            </p>
+
+                            <!-- Info Row -->
+                            <div class="pkg-info-row">
+                                <div class="pkg-info-item">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    {{ package.duration }}
+                                </div>
+                                <div class="pkg-info-item">
+                                    <i class="fa fa-users"></i>
+                                    {% if package.available %}Available{% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Star Rating -->
+                            {% if package.rating %}
+                            <div class="pkg-rating">
+                                {% for i in ratings_range %}
+                                    {% if i <= package.rating %}
+                                        <i class="fa fa-star"></i>
+                                    {% else %}
+                                        <i class="fa fa-star-o"></i>
+                                    {% endif %}
+                                {% endfor %}
+                                <span>({{ package.rating }}/5)</span>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Footer: Buttons -->
+                        <div class="pkg-card-footer">
+                            <a href="{% url 'travel_package_detail' package_id=package.id %}" class="pkg-btn pkg-btn-secondary">
+                                <i class="fa fa-eye"></i> View
+                            </a>
+                            <a href="{% url 'booking_handler_view' package_id=package.id %}" class="pkg-btn pkg-btn-primary">
+                                <i class="fa fa-check"></i> Book
+                            </a>
+                            <button type="button" class="pkg-btn {% if package.available %}pkg-btn-available{% else %}pkg-btn-unavailable{% endif %}" disabled>
+                                <i class="fa fa-{% if package.available %}check-circle{% else %}times-circle{% endif %}"></i>
+                                {% if package.available %}Available{% else %}Sold Out{% endif %}
+                            </button>
                         </div>
                     </div>
-
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
+        {% else %}
+        <div class="text-center text-muted py-5">
+            Packages will be available soon.
+        </div>
+        {% endif %}
     </div>
 
     <div class="col-12">
         <div class="text-center">
-            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="{% url 'travel_package_list' %}">
-                Browse Packages
+            <a class="btn btn-primary rounded-pill py-3 px-5 mt-4" href="{% url 'travel_package_list' %}">
+                Browse All Packages
             </a>
         </div>
     </div>
